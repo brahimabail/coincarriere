@@ -848,8 +848,8 @@ p.sec-sub{
   display:flex;
   width:max-content;
   align-items:center;
-  animation:logoScroll 30s linear infinite;
   will-change:transform;
+  transform:translateX(0);
 }
 @keyframes logoScroll{
   0%  {transform:translateX(0)}
@@ -883,10 +883,24 @@ p.sec-sub{
 @media(max-width:768px){
   .logos-section{padding:24px 0 16px}
   .marquee-wrapper::before,
-  .marquee-wrapper::after{width:40px}
-  .logo-slot{padding:0 18px;height:56px}
-  .logo-img{height:36px;filter:grayscale(0%) opacity(1) !important;transform:none}
-  .marquee-track{animation-duration:22s}
+  .marquee-wrapper::after{width:30px}
+  .logo-slot{
+    padding:0 20px;
+    height:64px;
+    min-width:100px;
+  }
+  .logo-img{
+    height:40px !important;
+    width:auto !important;
+    min-width:60px;
+    max-width:120px;
+    filter:none !important;
+    opacity:1 !important;
+    display:block !important;
+    visibility:visible !important;
+  }
+  .marquee-track{animation-duration:25s}
+  .marquee-group{display:flex;align-items:center}
 }
 
 /* ═══════════════════════════════
@@ -1544,12 +1558,17 @@ footer p{
     padding:20px 0;
   }
   .logo-slot{
-    height:52px;
-    padding:0 14px;
+    height:60px;
+    padding:0 16px;
+    min-width:90px;
   }
   .logo-img{
-    height:34px;
-    filter:grayscale(0%) opacity(1) !important;
+    height:38px !important;
+    width:auto !important;
+    min-width:50px;
+    filter:none !important;
+    opacity:1 !important;
+    display:block !important;
   }
   .proof-inner{flex-direction:column}
   .proof-item{border-left:none;border-top:1px solid rgba(255,255,255,.08)}
@@ -2603,6 +2622,62 @@ function resetContactForm() {
   }
   window.addEventListener('scroll', updateBar, {passive:true});
   window.addEventListener('resize', updateBar, {passive:true});
+
+  // ── Logos Marquee — JS driven, waits for images ───────
+  (function(){
+    const section = document.querySelector('.logos-section');
+    const track   = document.querySelector('.marquee-track');
+    if (!section || !track) return;
+
+    let pos = 0;
+    let raf = null;
+    let started = false;
+    const speed = 0.5; // px per frame
+
+    function getHalfWidth(){
+      const groups = track.querySelectorAll('.marquee-group');
+      if(groups.length < 2) return track.scrollWidth / 2;
+      return groups[0].offsetWidth;
+    }
+
+    function step(){
+      const half = getHalfWidth();
+      if(half === 0){ raf = requestAnimationFrame(step); return; }
+      pos += speed;
+      if(pos >= half) pos = 0;
+      track.style.transform = 'translateX(-' + pos + 'px)';
+      raf = requestAnimationFrame(step);
+    }
+
+    function startMarquee(){
+      if(started) return;
+      started = true;
+      // wait for all images in track to load
+      const imgs = Array.from(track.querySelectorAll('img'));
+      const loaded = imgs.filter(i => i.complete && i.naturalWidth > 0).length;
+      if(loaded === imgs.length){
+        raf = requestAnimationFrame(step);
+      } else {
+        let count = 0;
+        imgs.forEach(img => {
+          if(img.complete && img.naturalWidth > 0){ count++; if(count===imgs.length) raf=requestAnimationFrame(step); return; }
+          img.addEventListener('load',  ()=>{ count++; if(count===imgs.length) raf=requestAnimationFrame(step); }, {once:true});
+          img.addEventListener('error', ()=>{ count++; if(count===imgs.length) raf=requestAnimationFrame(step); }, {once:true});
+        });
+        // fallback: start after 2s regardless
+        setTimeout(()=>{ if(!raf) raf=requestAnimationFrame(step); }, 2000);
+      }
+    }
+
+    if('IntersectionObserver' in window){
+      const obs = new IntersectionObserver(entries=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ startMarquee(); obs.disconnect(); } });
+      },{threshold:0.15});
+      obs.observe(section);
+    } else {
+      startMarquee();
+    }
+  })();
 
   // ── Exit Intent ────────────────────────────────
   let popShown = false;
