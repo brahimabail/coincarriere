@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CoinCarrière — وظّف كفاءات مراكز النداء بذكاء</title>
+<link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dl296lrkq/image/upload/v1777292034/575713695_17845265847607766_1699283501162632547_n_ydnpqy.jpg"/>
+<link rel="shortcut icon" type="image/jpeg" href="https://res.cloudinary.com/dl296lrkq/image/upload/v1777292034/575713695_17845265847607766_1699283501162632547_n_ydnpqy.jpg"/>
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/dl296lrkq/image/upload/v1777292034/575713695_17845265847607766_1699283501162632547_n_ydnpqy.jpg"/>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1943505183203566');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1943505183203566&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+<style>
+/* ═══════════════════════════════
+   BASE
+═══════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Cairo',sans-serif;
+  background:#fff;
+  color:#111827;
+  overflow-x:hidden;
+  padding-bottom:0;
+  line-height:1.65;
+}
+
+img{max-width:100%;display:block}
+
+.container{max-width:1080px;margin:0 auto;padding:0 24px;width:100%}
+.center{text-align:center}
+
+/* Reveal animation */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.rv.on{opacity:1;transform:translateY(0)}
+.rv2{opacity:0;transform:translateY(22px);transition:opacity .55s .1s ease,transform .55s .1s ease}
+.rv2.on{opacity:1;transform:translateY(0)}
+.rv3{opacity:0;transform:translateY(22px);transition:opacity .55s .2s ease,transform .55s .2s ease}
+.rv3.on{opacity:1;transform:translateY(0)}
+
+/* Section label pill */
+.pill{
+  display:inline-block;
+  font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:#0077B6;
+  background:rgba(0,119,182,.07);
+  border:1px solid rgba(0,119,182,.18);
+  padding:4px 14px;border-radius:50px;
+  margin-bottom:14px;
+}
+
+h2.sec-title{
+  font-size:clamp(1.6rem,3.2vw,2.3rem);
+  font-weight:900;color:#0a1929;line-height:1.3;
+  margin-bottom:12px;
+}
+p.sec-sub{
+  font-size:1rem;color:#1a1a1a;
+  max-width:560px;margin:0 auto;line-height:1.85;
+}
+
+/* CTA Buttons */
+.btn{
+  display:inline-block;
+  background:#b4dc02;color:#000;
+  font-weight:800;font-size:1rem;
+  padding:15px 38px;border-radius:10px;
+  border:none;cursor:pointer;
+  font-family:'Cairo',sans-serif;
+  text-decoration:none;
+  transition:background .2s,transform .15s,box-shadow .2s;
+  box-shadow:0 4px 18px rgba(180,220,2,.35);
+  letter-spacing:.01em;
+}
+.btn:hover{background:#9bc400;transform:translateY(-2px);box-shadow:0 8px 28px rgba(180,220,2,.45)}
+.btn-sm{padding:11px 26px;font-size:.9rem}
+
+.trust-row{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:18px;
+  margin-top:16px;
+}
+.ti{display:flex;align-items:center;gap:6px;font-size:.83rem;color:#1a1a1a;font-weight:500}
+.ti b{width:6px;height:6px;border-radius:50%;background:#b4dc02;flex-shrink:0;display:inline-block}
+.hero .trust-row{
+  margin-top:18px;
+}
+.hero .trust-row .ti{
+  color:rgba(255,255,255,.86);
+}
+.hero .trust-row .ti b{
+  background:#b4dc02;
+  box-shadow:0 0 0 2px rgba(180,220,2,.14);
+}
+@media(max-width:900px){
+  .hero .trust-row{
+    display:none !important;
+  }
+}
+
+/* ═══════════════════════════════
+   1. HERO
+═══════════════════════════════ */
+.hero{
+  position:relative;
+  min-height:980px;
+  padding:0 24px;
+  border-bottom:1px solid #f0f4f8;
+  text-align:center;
+  overflow:hidden;
+  display:flex;
+  align-items:stretch;
+  justify-content:center;
+  background:#0a1929;
+}
+@media(max-width:768px){
+  .hero{
+    display:none !important;
+  }
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:transparent;
+  z-index:1;
+}
+.hero-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+  pointer-events:none;
+  filter:saturate(1.05) brightness(.45);
+}
+  }
+}
+
+.hero .container{
+  position:relative;
+  z-index:2;
+  width:100%;
+  min-height:980px;
+}
+.hero .hero-badge{
+  position:absolute;
+  top:36px;
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+}
+.hero-bottom-block{
+  position:absolute;
+  bottom:60px;
+  left:0;
+  right:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:100%;
+  text-align:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(180,220,2,.5);
+  color:#0a1929;
+  font-size:.78rem;font-weight:700;padding:5px 16px;border-radius:50px;
+  margin-bottom:22px;letter-spacing:.04em;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+}
+.hero-badge span{
+  width:7px;height:7px;border-radius:50%;
+  background:#b4dc02;display:inline-block;
+  animation:blink 1.6s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+.hero h1{
+  font-size:clamp(2rem,4.8vw,3.2rem);
+  font-weight:900;line-height:1.35;color:#fff;
+  margin-bottom:18px;
+  text-shadow:0 2px 12px rgba(0,0,0,.6);
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:1.8rem;
+    line-height:1.4;
+  }
+}
+@media(max-width:640px){
+  .hero h1{
+    font-size:1.5rem;
+    line-height:1.5;
+    margin-bottom:14px;
+  }
+}
+.hero-line{
+  display:block;
+  unicode-bidi:plaintext;
+}
+.hero h1 em{
+  font-style:normal;color:#b4dc02;
+}
+.hero-sub{
+  font-size:1.08rem;color:#fff;
+  max-width:600px;margin:0 auto 18px;line-height:1.85;
+  text-shadow:0 1px 8px rgba(0,0,0,.5);
+}
+.hero-promise{
+  font-size:.94rem;
+  color:#fff;
+  max-width:560px;
+  margin:0 auto 28px;
+  line-height:1.8;
+  font-weight:700;
+  text-shadow:0 2px 12px rgba(0,0,0,.5);
+}
+.hero-promise .promise-line{
+  display:block;
+}
+@media(max-width:768px){
+  .hero-promise{
+    font-size:0.95rem;
+    margin-bottom:24px;
+  }
+}
+@media(max-width:640px){
+  .hero-promise{
+    font-size:0.88rem;
+    margin-bottom:18px;
+    line-height:1.7;
+  }
+}
+.pain-chips{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
+  margin-bottom:34px;
+}
+.chip{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.22);
+  color:#fff;
+  font-size:.8rem;font-weight:600;padding:6px 16px;border-radius:50px;
+  backdrop-filter:blur(4px);
+}
+@media(max-width:640px){
+  .pain-chips{
+    display:none !important;
+  }
+}
+
+/* ═══════════════════════════════
+   HERO CUSTOM (Mobile) — Full BG Image
+═══════════════════════════════ */
+.hero-custom{
+  display:none;
+  position:relative;
+  width:100%;
+  min-height:100svh;
+  overflow:hidden;
+  color:#fff;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+
+/* الصورة في الخلفية */
+.hero-custom-img{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+.hero-custom-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+}
+/* gradient خفيف فوق الصورة للبادج، وقوي فالأسفل للنص */
+.hero-custom-img::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(10,25,41,.35) 0%,
+    rgba(10,25,41,.05) 35%,
+    rgba(10,25,41,.0) 55%,
+    rgba(10,25,41,.72) 78%,
+    rgba(10,25,41,.92) 100%
+  );
+  z-index:1;
+}
+/* البادج فوق الصورة */
+.hero-custom-img .hero-badge-wrap{
+  position:absolute;
+  top:16px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:2;
+  white-space:nowrap;
+}
+.hero-custom-img .hero-badge-wrap .hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(180,220,2,.5);
+  color:#0a1929;
+  font-size:.72rem;
+  font-weight:700;
+  padding:5px 14px;
+  border-radius:50px;
+  box-shadow:0 4px 14px rgba(0,0,0,.18);
+  letter-spacing:.02em;
+  margin-bottom:0;
+}
+.hero-custom-img .hero-badge-wrap .hero-badge span{
+  width:7px;height:7px;border-radius:50%;
+  background:#b4dc02;display:inline-block;
+  animation:blink 1.6s ease-in-out infinite;
+  flex-shrink:0;
+}
+
+/* المحتوى فالأسفل فوق الصورة */
+.hero-custom-content{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:2;
+  padding:28px 22px 44px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* العنوان */
+.hero-custom .hero-title{
+  font-size:clamp(1.55rem, 6.5vw, 2.1rem);
+  line-height:1.42;
+  font-weight:900;
+  margin-bottom:14px;
+  color:#fff;
+  text-shadow:0 2px 16px rgba(0,0,0,.3);
+  letter-spacing:-.01em;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+.hero-custom .hero-title .hero-line{
+  display:block;
+}
+.hero-custom .hero-title em{
+  font-style:normal;
+  color:#b4dc02;
+}
+
+/* البروميس */
+.hero-custom .hero-promise{
+  font-size:clamp(.72rem, 3.4vw, 1rem);
+  color:#fff;
+  line-height:1.75;
+  margin:0 auto 22px;
+  max-width:100%;
+  width:100%;
+  text-shadow:0 2px 10px rgba(0,0,0,.6);
+}
+.hero-custom .hero-promise .promise-line{
+  display:block;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-size:clamp(.62rem, 3.1vw, .92rem);
+  color:#fff;
+}
+
+@media(max-width:768px){
+  .hero-custom .hero-promise .promise-line{
+    font-size:clamp(.64rem, 3.3vw, .88rem);
+  }
+}
+@media(max-width:480px){
+  .hero-custom .hero-promise .promise-line{
+    font-size:clamp(.58rem, 3.5vw, .78rem);
+  }
+}
+@media(max-width:360px){
+  .hero-custom .hero-promise .promise-line{
+    font-size:clamp(.52rem, 3.8vw, .68rem);
+  }
+}
+.hero-custom .hero-trust{
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:center;
+  gap:14px;
+  margin-top:16px;
+  width:100%;
+}
+.hero-custom .hero-trust .ti{
+  color:rgba(255,255,255,.6);
+  font-size:.78rem;
+  flex:1;
+  justify-content:center;
+  text-align:center;
+  white-space:nowrap;
+}
+@media(max-width:768px){
+  .hero-custom .hero-trust{
+    gap:0;
+    width:100%;
+  }
+  .hero-custom .hero-trust .ti{
+    flex:1;
+    justify-content:center;
+    font-size:clamp(.72rem, 3.8vw, .88rem);
+    white-space:nowrap;
+    padding:0 4px;
+  }
+}
+
+/* CTA shimmer */
+.hero-cta-animated{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  max-width:300px;
+  display:block;
+  text-align:center;
+}
+.hero-cta-animated::after{
+  content:'';
+  position:absolute;
+  top:-60%;
+  left:-40%;
+  width:40%;
+  height:220%;
+  background:linear-gradient(90deg, transparent 0%, rgba(255,255,255,.55) 50%, transparent 100%);
+  transform:rotate(20deg) translateX(-250%);
+  animation:cta-shimmer 2.2s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes cta-shimmer{
+  0%{ transform:rotate(20deg) translateX(-250%); opacity:0 }
+  25%{ opacity:.9 }
+  65%{ transform:rotate(20deg) translateX(360%); opacity:.9 }
+  100%{ transform:rotate(20deg) translateX(360%); opacity:0 }
+}
+
+@media(max-width:900px){
+  .hero-custom{display:flex;}
+  .hero{display:none !important;}
+}
+
+/* ── Mobile Hero: image on top, text pinned to bottom ── */
+@media(max-width:768px){
+
+  /* gradient: صافي فوق، داكن فالأسفل */
+  .hero-custom-img::before{
+    background:linear-gradient(
+      180deg,
+      rgba(10,25,41,.30) 0%,
+      rgba(10,25,41,.0)  28%,
+      rgba(10,25,41,.0)  46%,
+      rgba(10,25,41,.70) 65%,
+      rgba(10,25,41,.96) 100%
+    );
+  }
+
+  .hero-custom-content{
+    padding:0 20px 48px;
+  }
+
+  /* headline — responsive وكبير */
+  .hero-custom .hero-title{
+    font-size:clamp(1.6rem, 7vw, 2.2rem);
+    line-height:1.4;
+    margin-bottom:14px;
+    letter-spacing:-.01em;
+  }
+
+  /* subheadline — responsive */
+  .hero-custom .hero-promise{
+    font-size:clamp(.85rem, 3.8vw, 1.05rem);
+    line-height:1.85;
+    margin-bottom:22px;
+    max-width:100%;
+  }
+  .hero-custom .hero-promise .promise-line{
+    font-size:clamp(.78rem, 3.6vw, .95rem);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  /* زر CTA كامل العرض */
+  .hero-custom .btn{
+    width:100%;
+    max-width:320px;
+    text-align:center;
+  }
+
+  .hero-custom .hero-trust{
+    margin-top:14px;
+    flex-wrap:nowrap;
+    gap:0;
+    width:100%;
+  }
+  .hero-custom .hero-trust .ti{
+    color:rgba(255,255,255,.55);
+    font-size:clamp(.72rem, 3.8vw, .88rem);
+    flex:1;
+    justify-content:center;
+    white-space:nowrap;
+    padding:0 4px;
+  }
+}
+
+@media(max-width:480px){
+  .hero-custom .hero-title{
+    font-size:clamp(1.45rem, 7.5vw, 1.75rem);
+    line-height:1.42;
+  }
+  .hero-custom .hero-promise{
+    font-size:clamp(.8rem, 4vw, .95rem);
+  }
+  .hero-custom .hero-promise .promise-line{
+    font-size:clamp(.72rem, 3.8vw, .88rem);
+  }
+  .hero-custom-content{
+    padding:0 16px 40px;
+  }
+}
+
+@media(max-width:360px){
+  .hero-custom .hero-title{
+    font-size:clamp(1.3rem, 8vw, 1.55rem);
+  }
+  .hero-custom .hero-promise{
+    font-size:clamp(.78rem, 4.2vw, .9rem);
+  }
+  .hero-custom .hero-promise .promise-line{
+    font-size:clamp(.68rem, 4vw, .82rem);
+  }
+}
+
+/* ═══════════════════════════════
+   2. SOCIAL PROOF
+═══════════════════════════════ */
+/* a) Proof bar (numbers) */
+.proof-bar{
+  background:#0a1929;
+  padding:28px 24px;
+}
+.proof-inner{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  max-width:820px;margin:0 auto;
+  border-radius:14px;
+  overflow:hidden;
+  position:relative;
+  isolation:isolate;
+  /* base border replaced by pseudo glow */
+  border:1px solid rgba(255,255,255,.06);
+}
+
+/* ── Rotating conic-gradient glow border ── */
+.proof-inner::before{
+  content:'';
+  position:absolute;
+  inset:-2px;
+  border-radius:16px;
+  background:conic-gradient(
+    from 0deg,
+    transparent    0%,
+    transparent   30%,
+    rgba(180,220,2,.18) 42%,
+    rgba(180,220,2,.72) 50%,
+    rgba(180,220,2,.18) 58%,
+    transparent   70%,
+    transparent  100%
+  );
+  animation:borderSpin 5s linear infinite;
+  z-index:-2;
+  pointer-events:none;
+}
+
+/* ── Mask to show only the thin border strip ── */
+.proof-inner::after{
+  content:'';
+  position:absolute;
+  inset:1.5px;
+  border-radius:13px;
+  background:#0a1929;
+  z-index:-1;
+  pointer-events:none;
+}
+
+/* ── Keyframes: full 360° clockwise ── */
+@keyframes borderSpin{
+  from{ transform:rotate(0deg); }
+  to  { transform:rotate(360deg); }
+}
+
+/* ── Inner soft glow bloom (static, adds depth) ── */
+.proof-inner .proof-glow-inner{
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  pointer-events:none;
+  z-index:0;
+  background:radial-gradient(
+    ellipse 60% 55% at 50% 50%,
+    rgba(180,220,2,.04) 0%,
+    transparent 70%
+  );
+  animation:innerPulse 5s ease-in-out infinite;
+}
+
+@keyframes innerPulse{
+  0%,100%{ opacity:.6; }
+  50%    { opacity:1;  }
+}
+
+/* ── Hover: intensify ── */
+.proof-inner:hover::before{
+  background:conic-gradient(
+    from 0deg,
+    transparent    0%,
+    transparent   25%,
+    rgba(180,220,2,.28) 38%,
+    rgba(180,220,2,.95) 50%,
+    rgba(180,220,2,.28) 62%,
+    transparent   75%,
+    transparent  100%
+  );
+  animation-duration:3.5s;
+}
+
+.proof-item{
+  flex:1;min-width:150px;
+  padding:22px 16px;text-align:center;
+  border-left:1px solid rgba(255,255,255,.08);
+  position:relative;
+  z-index:1;
+}
+.proof-item:last-child{border-left:none}
+.proof-num{
+  display:block;font-size:2rem;font-weight:900;
+  color:#b4dc02;line-height:1;margin-bottom:5px;
+}
+.proof-label{font-size:.78rem;color:rgba(255,255,255,.6);font-weight:500}
+
+/* b) Testimonials */
+.testimonials{
+  position:relative;
+  background:#fff;
+  padding:72px 0 64px;
+  overflow:hidden;
+  border-top:1px solid #f3f4f6;
+  border-bottom:1px solid #f3f4f6;
+}
+.testimonials .container{
+  position:relative;
+  z-index:1;
+}
+.testimonials .pill{
+  color:#0077B6;
+  background:rgba(0,119,182,.07);
+  border-color:rgba(0,119,182,.18);
+}
+.testimonials .sec-title{
+  color:#0a1929;
+}
+.testimonials .sec-sub{
+  color:#1a1a1a;
+}
+.testimonial-marquee{
+  margin-top:40px;
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  direction:ltr;
+}
+.testimonial-row{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  direction:ltr;
+}
+.testimonial-row + .testimonial-row{
+  margin-top:18px;
+}
+.testimonial-track{
+  display:flex;
+  width:max-content;
+  min-width:max-content;
+  gap:18px;
+  padding:10px 0;
+  will-change:transform;
+  animation:testimonialScroll 38s linear infinite;
+  direction:ltr;
+}
+.testimonial-track.reverse{
+  animation-direction:reverse;
+}
+.testimonial-track:hover{
+  animation-play-state:paused;
+}
+@keyframes testimonialScroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+.testimonial-card{
+  width:320px;
+  flex:0 0 auto;
+  background:#fff;
+  border-radius:18px;
+  padding:18px 18px 20px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 14px 34px rgba(15,23,42,.08);
+  transition:transform .2s ease,box-shadow .2s ease;
+  direction:rtl;
+}
+.testimonial-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 42px rgba(15,23,42,.12);
+}
+.testimonial-top{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.testimonial-avatar{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+  border:2px solid #fff;
+  box-shadow:0 4px 12px rgba(0,0,0,.14);
+}
+.testimonial-meta{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  min-width:0;
+}
+.testimonial-name{
+  font-size:1rem;
+  font-weight:800;
+  color:#0a1929;
+  line-height:1.2;
+  margin-bottom:0;
+}
+.testimonial-company{
+  font-size:.88rem;
+  color:#0077B6;
+  font-weight:700;
+  margin-top:0;
+}
+.testimonial-footer,
+.testimonial-role,
+.testimonial-location,
+.testimonial-name-row,
+.testimonial-verify,
+.testimonial-handle{
+  display:none;
+}
+.testimonial-rating{
+  color:#d97706;
+  font-size:1rem;
+  letter-spacing:.08em;
+  margin-top:-2px;
+  line-height:1.1;
+}
+@media(max-width:640px){
+  .testimonial-marquee{
+    width:100vw;
+    margin-inline:calc(50% - 50vw);
+  }
+  .testimonial-card{
+    width:286px;
+  }
+  .testimonial-track{
+    gap:14px;
+    padding:10px 0;
+  }
+}
+/* c) Logos marquee */
+.logos-section{
+  position:relative;
+  background:#fff;
+  padding:32px 0 20px;
+  overflow:hidden;
+  border-top:1px solid #f0f4f6;
+  border-bottom:1px solid #f0f4f6;
+}
+.logos-label{
+  text-align:center;
+  font-size:.78rem;
+  color:#1a1a1a;
+  font-weight:700;
+  letter-spacing:.04em;
+  margin-bottom:16px;
+  padding:0 20px;
+}
+.marquee-wrapper{
+  overflow:hidden;
+  width:100%;
+  position:relative;
+}
+.marquee-wrapper::before,
+.marquee-wrapper::after{
+  content:'';
+  position:absolute;
+  top:0;bottom:0;
+  width:80px;
+  z-index:2;
+  pointer-events:none;
+}
+.marquee-wrapper::before{left:0;background:linear-gradient(to right,#fff 40%,transparent)}
+.marquee-wrapper::after{right:0;background:linear-gradient(to left,#fff 40%,transparent)}
+
+.marquee-track{
+  display:flex;
+  width:max-content;
+  align-items:center;
+  animation:logoScroll 30s linear infinite;
+  will-change:transform;
+}
+@keyframes logoScroll{
+  0%  {transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+.marquee-group{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+}
+.logo-slot{
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 24px;
+  height:60px;
+}
+.logo-img{
+  height:36px;
+  width:auto;
+  max-width:none;
+  object-fit:contain;
+  display:block;
+  filter:grayscale(15%) opacity(.85);
+  transition:filter .25s,transform .25s;
+}
+.logo-img:hover{filter:grayscale(0%) opacity(1);transform:translateY(-2px)}
+
+/* Mobile logos fix */
+@media(max-width:768px){
+  .logos-section{padding:24px 0 16px}
+  .marquee-wrapper::before,
+  .marquee-wrapper::after{width:40px}
+  .logo-slot{padding:0 18px;height:56px}
+  .logo-img{height:36px;filter:grayscale(0%) opacity(1) !important;transform:none}
+  .marquee-track{animation-duration:22s}
+}
+
+/* ═══════════════════════════════
+   HERO CUSTOM (MOBILE)
+═══════════════════════════════ */
+.hero-custom{
+  background:url('https://res.cloudinary.com/dl296lrkq/image/upload/v1777376929/Untitled_1080_x_1920_px_1_ikpcu4.png') no-repeat center center/cover;
+  height:100vh;
+  display:none;
+  flex-direction:column;
+  justify-content:space-between;
+  text-align:center;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.top-banner{
+  background:rgba(255,255,255,.95);
+  color:#000;
+  padding:12px 16px;
+  font-weight:700;
+  font-size:.85rem;
+  letter-spacing:.02em;
+}
+.hero-bottom-content{
+  padding:40px 20px 50px;
+  background:linear-gradient(transparent,rgba(0,0,0,.85));
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  flex:1;
+}
+.hero-bottom-content h1{
+  font-size:1.8rem;
+  font-weight:900;
+  line-height:1.4;
+  margin-bottom:16px;
+  text-shadow:0 2px 8px rgba(0,0,0,.3);
+}
+.hero-bottom-content p{
+  font-size:.95rem;
+  line-height:1.7;
+  margin-bottom:20px;
+  text-shadow:0 1px 4px rgba(0,0,0,.2);
+  opacity:.95;
+}
+.cta-btn{
+  background:#ccff00;
+  color:#000;
+  border:none;
+  padding:14px 32px;
+  font-weight:800;
+  font-size:1rem;
+  border-radius:8px;
+  margin-top:0;
+  cursor:pointer;
+  font-family:'Cairo',sans-serif;
+  transition:background .2s,transform .15s;
+  box-shadow:0 4px 16px rgba(204,255,0,.35);
+  align-self:center;
+}
+.cta-btn:hover{
+  background:#b8e600;
+  transform:translateY(-2px);
+  box-shadow:0 6px 24px rgba(204,255,0,.45);
+}
+/* Show hero-custom on mobile only (max-width: 768px) */
+@media(max-width:768px){
+  .hero-custom{
+    display:flex;
+  }
+  .hero{
+    display:none !important;
+  }
+}
+/* Hide hero-custom on desktop */
+@media(min-width:769px){
+  .hero-custom{
+    display:none !important;
+  }
+  .hero{
+    display:flex;
+  }
+}
+
+/* ═══════════════════════════════
+   3. PROCESS
+═══════════════════════════════ */
+.process-section{
+  background:rgba(52,175,231,.07);
+  padding:72px 24px;
+}
+.steps-row{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:2px;
+  background:#e5e7eb;
+  border:1px solid #e5e7eb;border-radius:16px;
+  overflow:visible;
+  margin-top:44px;
+  position:relative;
+}
+.step{
+  background:#fff;padding:32px 24px;
+  min-width:0;
+  transition:background .2s;position:relative;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  isolation:isolate;
+}
+.step:hover{background:#f8fafc}
+.step-header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:12px;
+}
+.step-n{
+  width:44px;height:44px;border-radius:12px;
+  background:#0077B6;color:#fff;
+  font-weight:900;font-size:1.05rem;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 4px 12px rgba(0,119,182,.25);
+  transition:background .4s ease, box-shadow .4s ease, transform .4s ease;
+  position:relative;
+  z-index:1;
+}
+.step h3{font-size:1rem;font-weight:700;color:#0a1929;margin-bottom:0;flex:1;position:relative;z-index:1;transition:color .4s ease;}
+.step p{font-size:.875rem;color:#1a1a1a;line-height:1.75;position:relative;z-index:1;}
+
+/* ── Glow border pseudo-element ── */
+.step::before{
+  content:'';
+  position:absolute;
+  inset:-2px;
+  border-radius:0;
+  background:transparent;
+  border:2.5px solid transparent;
+  pointer-events:none;
+  z-index:2;
+  transition:border-color .35s ease, box-shadow .35s ease;
+}
+
+/* ── Shimmer sweep pseudo-element ── */
+.step::after{
+  content:'';
+  position:absolute;
+  top:0; left:-120%;
+  width:60%;
+  height:100%;
+  background:linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(180,220,2,.09) 35%,
+    rgba(180,220,2,.22) 50%,
+    rgba(180,220,2,.09) 65%,
+    transparent 100%
+  );
+  transform:skewX(-12deg);
+  pointer-events:none;
+  z-index:2;
+  opacity:0;
+}
+
+/* ── ACTIVE HIGHLIGHT STATE ── */
+.step.step-highlight{
+  background:rgba(180,220,2,.042);
+  transform:scale(1.028);
+  z-index:3;
+  box-shadow:
+    0 0 0 2px #b4dc02,
+    0 6px 32px rgba(180,220,2,.28),
+    0 2px 12px rgba(180,220,2,.18);
+}
+.step.step-highlight::before{
+  border-color:#b4dc02;
+  box-shadow:
+    0 0 18px rgba(180,220,2,.35),
+    inset 0 0 12px rgba(180,220,2,.08);
+}
+.step.step-highlight .step-n{
+  background:#b4dc02;
+  color:#0a1929;
+  box-shadow:0 4px 18px rgba(180,220,2,.55), 0 0 0 4px rgba(180,220,2,.18);
+  transform:scale(1.08);
+}
+.step.step-highlight h3{
+  color:#3a5a00;
+}
+.step.step-highlight::after{
+  animation:stepShimmer .85s ease forwards;
+}
+
+@keyframes stepShimmer{
+  0%  { left:-120%; opacity:0; }
+  15% { opacity:1; }
+  70% { opacity:1; }
+  100%{ left:130%; opacity:0; }
+}
+
+/* ── Pulse ring (inject via JS) ── */
+.step-pulse-ring{
+  position:absolute;
+  inset:0;
+  border-radius:0;
+  border:2px solid #b4dc02;
+  opacity:0;
+  pointer-events:none;
+  z-index:4;
+  animation:stepPulseRing 1.1s ease-out forwards;
+}
+@keyframes stepPulseRing{
+  0%  { opacity:.7; transform:scale(.97); }
+  60% { opacity:.18; transform:scale(1.04); }
+  100%{ opacity:0;  transform:scale(1.07); }
+}
+
+/* smooth transition out */
+.step.step-highlight-exit{
+  transition:
+    background .5s ease,
+    box-shadow .5s ease,
+    transform .5s ease;
+}
+.step.step-highlight-exit::before{
+  transition:border-color .5s ease, box-shadow .5s ease;
+}
+.step.step-highlight-exit .step-n{
+  transition:background .5s ease, box-shadow .5s ease, transform .5s ease, color .5s ease;
+}
+.step.step-highlight-exit h3{
+  transition:color .5s ease;
+}
+
+/* ── responsive steps grid ── */
+@media(min-width:641px){
+  .step:first-child{ border-radius:14px 0 0 14px; }
+  .step:last-child { border-radius:0 14px 14px 0; }
+}
+@media(max-width:640px){
+  .step:first-child{ border-radius:14px 14px 0 0; }
+  .step:last-child { border-radius:0 0 14px 14px; }
+}
+.benefits-section{
+  background:#f9fafb;
+  padding:72px 24px;
+  border-top:1px solid #f0f4f8;border-bottom:1px solid #f0f4f8;
+}
+.benefits-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:14px;
+  margin-top:44px;
+}
+.benefit-card{
+  background:#fff;border:1px solid #e5e7eb;border-radius:14px;
+  padding:26px 22px;
+  transition:border-color .2s,box-shadow .2s,transform .2s;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  grid-template-rows:auto auto auto;
+  gap:8px 14px;
+  height:100%;
+  align-content:flex-start;
+}
+.benefit-card:hover{
+  border-color:#0077B6;
+  box-shadow:0 4px 20px rgba(0,119,182,.09);
+  transform:translateY(-2px);
+}
+.b-icon{
+  width:44px;height:44px;border-radius:11px;
+  background:linear-gradient(135deg,#0077B6,#0096d6);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0;line-height:0;color:transparent;
+  margin-bottom:0;
+  box-shadow:0 3px 10px rgba(0,119,182,.2);
+  grid-row:1;
+  grid-column:1;
+  align-self:flex-start;
+}
+.b-icon::before{
+  content:'';
+  width:22px;
+  height:22px;
+  display:block;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+}
+.benefits-grid .benefit-card:nth-child(1) .b-icon::before{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffffff' d='M13 2 3 14h7l-1 8 11-14h-7l1-6z'/%3E%3C/svg%3E");
+}
+.benefits-grid .benefit-card:nth-child(2) .b-icon::before{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='none' stroke='%23ffffff' stroke-width='2.2'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23ffffff'/%3E%3Cpath d='M12 2v4M22 12h-4M12 22v-4M2 12h4' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.benefits-grid .benefit-card:nth-child(3) .b-icon::before{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2.2' d='M4 12a8 8 0 1 0 16 0a8 8 0 1 0-16 0'/%3E%3Cpath d='M7 7l10 10' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.benefits-grid .benefit-card:nth-child(4) .b-icon::before{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M7 3h10a2 2 0 0 1 2 2v16H5V5a2 2 0 0 1 2-2z'/%3E%3Cpath d='M9 3v4h6V3' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M8 11h8M8 15h8' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.benefits-grid .benefit-card:nth-child(5) .b-icon::before{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 19V9' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M12 19V5' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M19 19V12' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M4 19h16' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.benefits-grid .benefit-card:nth-child(6) .b-icon::before{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M4 19a8 8 0 0 1 16 0'/%3E%3Ccircle cx='12' cy='8' r='3' fill='none' stroke='%23ffffff' stroke-width='2.2'/%3E%3Cpath d='M18 8h2M19 6l1-1M19 10l1 1' stroke='%23ffffff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.benefit-card h3{font-size:.95rem;font-weight:700;color:#0a1929;margin-bottom:0;grid-row:1;grid-column:2;align-self:center;line-height:1.4;}
+.benefit-result{
+  display:inline-block;
+  background:#f0fdf0;border:1px solid #c6f135;
+  color:#3a6600;font-size:.75rem;font-weight:700;
+  padding:3px 10px;border-radius:20px;
+  margin-top:12px;
+  margin-bottom:0;
+  grid-row:3;
+  grid-column:1 / 3;
+  align-self:flex-end;
+  width:fit-content;
+  justify-self:center;
+}
+.benefit-card p{font-size:.85rem;color:#1a1a1a;line-height:1.7;grid-row:2;grid-column:1 / 3;margin:8px 0 0 0;}
+
+
+/* ═══════════════════════════════
+   6. STATS
+═══════════════════════════════ */
+.stats-section{
+  background:#fff;
+  padding:64px 24px;
+  border-top:1px solid #f0f4f8;border-bottom:1px solid #f0f4f8;
+}
+.stats-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:#e5e7eb;
+  border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;
+  max-width:700px;margin:40px auto 0;
+}
+.stat-box{background:#fff;padding:36px 20px;text-align:center}
+.stat-num{
+  display:block;font-size:clamp(2rem,4.5vw,3rem);
+  font-weight:900;color:#0077B6;line-height:1;margin-bottom:8px;
+}
+.stat-label{font-size:.85rem;color:#1a1a1a;font-weight:500}
+.stat-note{font-size:.75rem;color:#0a1929;margin-top:4px}
+
+/* ═══════════════════════════════
+   7. FINAL CTA
+═══════════════════════════════ */
+.final-section{
+  background:linear-gradient(135deg,rgba(10,25,41,.85) 0%,rgba(10,58,110,.85) 100%),url('https://res.cloudinary.com/dl296lrkq/image/upload/v1777372729/Untitled_design_3_1_w8g9ra.png') center/cover no-repeat;
+  padding:80px 24px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.final-section::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 900px 400px at 50% 50%,rgba(180,220,2,.06),transparent);
+}
+.final-section h2{
+  font-size:clamp(1.6rem,3.5vw,2.4rem);
+  font-weight:900;color:#fff;margin-bottom:14px;line-height:1.3;
+}
+.final-sub{font-size:1rem;color:rgba(255,255,255,.65);max-width:500px;margin:0 auto 32px;line-height:1.85}
+
+/* ═══════════════════════════════
+   FOOTER
+═══════════════════════════════ */
+footer{
+  background:#f9fafb;
+  border-top:1px solid #e5e7eb;
+  padding:20px 24px;
+  text-align:center;
+}
+footer p{
+  font-size:.8rem;
+  color:#1a1a1a;
+  margin-bottom:10px;
+}
+.footer-legal{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.footer-legal-btn{
+  background:none;
+  border:none;
+  font-family:'Cairo',sans-serif;
+  font-size:.78rem;
+  color:#1a1a1a;
+  cursor:pointer;
+  padding:2px 6px;
+  border-radius:4px;
+  transition:color .2s,background .2s;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+.footer-legal-btn:hover{color:#0077B6;background:rgba(0,119,182,.06)}
+.footer-sep{color:#d1d5db;font-size:.7rem;user-select:none}
+
+/* ═══════════════════════════════
+   LEGAL POPUP
+═══════════════════════════════ */
+#legal-overlay{
+  display:none;
+  position:fixed;inset:0;z-index:1100;
+  background:rgba(10,25,41,.7);
+  backdrop-filter:blur(4px);
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+}
+#legal-overlay.open{display:flex}
+.legal-box{
+  background:#fff;
+  border-radius:16px;
+  width:100%;
+  max-width:660px;
+  max-height:85vh;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 32px 80px rgba(0,0,0,.3);
+  animation:popIn .25s cubic-bezier(.34,1.56,.64,1);
+  overflow:hidden;
+  direction:rtl;
+}
+.legal-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 20px;
+  border-bottom:1px solid #f0f4f8;
+  flex-shrink:0;
+  background:#fff;
+  direction:rtl;
+}
+.legal-header h4{
+  font-size:1rem;
+  font-weight:800;
+  color:#0a1929;
+  margin:0;
+}
+.legal-close{
+  width:30px;height:30px;
+  display:flex;align-items:center;justify-content:center;
+  background:#f3f4f6;border:none;border-radius:8px;
+  cursor:pointer;font-size:1rem;color:#1a1a1a;
+  transition:background .2s;
+  flex-shrink:0;
+}
+.legal-close:hover{background:#e5e7eb}
+.legal-body{
+  flex:1;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  padding:0;
+}
+/* Legal content inner styling */
+.legal-content-inner{
+  padding:24px 28px 32px;
+  direction:rtl;
+  text-align:right;
+  font-family:'Cairo',sans-serif;
+  color:#374151;
+  font-size:.88rem;
+  line-height:1.75;
+}
+.legal-date{
+  font-size:.78rem;
+  color:#4b5563;
+  margin-bottom:20px;
+}
+.legal-content-inner h5{
+  font-size:.95rem;
+  font-weight:800;
+  color:#0a1929;
+  margin:22px 0 8px;
+  padding-bottom:4px;
+  border-bottom:2px solid #f0f4f8;
+}
+.legal-content-inner h6{
+  font-size:.85rem;
+  font-weight:700;
+  color:#374151;
+  margin:14px 0 6px;
+}
+.legal-content-inner p{
+  margin-bottom:10px;
+}
+.legal-content-inner ul{
+  padding-right:18px;
+  padding-left:0;
+  margin-bottom:10px;
+}
+.legal-content-inner ul li{
+  margin-bottom:4px;
+}
+.legal-content-inner table th,
+.legal-content-inner table td{
+  text-align:right !important;
+}
+@media(max-width:600px){
+  .legal-box{max-height:92vh;border-radius:14px}
+  .legal-content-inner{padding:18px 16px 28px}
+}
+#sticky-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:999;
+  background:#b4dc02;
+  padding:12px 20px;
+  display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  box-shadow:0 -2px 20px rgba(0,0,0,.12);
+  transform:translateY(100%);
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+}
+.s-text{font-weight:700;font-size:.9rem;color:#0a1929;font-family:'Cairo',sans-serif}
+.s-btn{
+  background:#0a1929;color:#b4dc02;
+  font-weight:800;font-size:.88rem;
+  padding:9px 22px;border-radius:8px;
+  text-decoration:none;white-space:nowrap;
+  font-family:'Cairo',sans-serif;transition:background .2s;
+}
+.s-btn:hover{background:#1a3a5c}
+
+/* ═══════════════════════════════
+   EXIT POPUP
+═══════════════════════════════ */
+#exit-overlay{
+  display:none;position:fixed;inset:0;z-index:1000;
+  background:rgba(10,25,41,.8);backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;padding:20px;
+}
+.popup-box{
+  background:#fff;border-radius:20px;
+  max-width:450px;width:100%;
+  padding:40px 28px;text-align:center;position:relative;
+  box-shadow:0 32px 80px rgba(0,0,0,.35);
+  font-family:'Cairo',sans-serif;
+  animation:popIn .3s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes popIn{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+.popup-close{
+  position:absolute;top:14px;left:16px;
+  width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;
+  background:none;border:none;cursor:pointer;
+  padding:0;font-size:0;line-height:0;color:transparent;
+}
+.popup-close::before{
+  content:'';
+  width:16px;
+  height:16px;
+  display:block;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 6l12 12M18 6L6 18' stroke='%239ca3af' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.popup-brand{
+  width:100%;
+  max-width:320px;
+  margin:0 auto 18px;
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+.popup-brand-img{
+  width:100%;
+  height:auto;
+  max-height:96px;
+  padding:0;
+  object-fit:contain;
+  display:block;
+}
+.popup-hi{
+  background:#fef9e7;border-radius:10px;padding:12px;margin:14px 0;
+  border:1px solid #fde68a;font-size:.84rem;color:#92640a;font-weight:700;
+}
+
+/* FOOTER */
+footer{
+  background:#0a1929;color:#fff;
+  padding:18px 20px;text-align:center;font-size:.82rem;
+}
+footer p{
+  color:#fff;
+  font-weight:500;
+}
+.footer-legal{
+  margin-top:8px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  flex-wrap:wrap;
+}
+.footer-legal-btn{
+  background:none;border:none;cursor:pointer;
+  color:rgba(255,255,255,.65);
+  font-size:.78rem;font-family:'Cairo',sans-serif;
+  transition:color .2s;
+  padding:2px 4px;
+}
+.footer-legal-btn:hover{color:#b4dc02}
+.footer-sep{color:rgba(255,255,255,.3);font-size:.75rem;}
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media(max-width:900px){
+  .hero{
+    padding:70px 20px 50px;
+    min-height:auto;
+  }
+  .hero-badge{
+    padding:4px 12px;
+    font-size:0.7rem;
+    margin-bottom:14px;
+  }
+  .btn{
+    padding:13px 32px;
+    font-size:0.96rem;
+  }
+  .sec-title{
+    font-size:1.6rem;
+  }
+}
+@media(max-width:640px){
+  .hero{
+    padding:50px 18px 30px;
+    min-height:auto;
+  }
+  .hero-badge{
+    padding:3px 10px;
+    font-size:0.65rem;
+    margin-bottom:10px;
+  }
+  .hero-sub{
+    font-size:1rem;
+    margin-bottom:14px;
+  }
+  .btn{
+    padding:11px 26px;
+    font-size:0.9rem;
+  }
+  .sec-title{
+    font-size:1.4rem !important;
+  }
+  .logos-section{
+    padding:20px 0;
+  }
+  .logo-slot{
+    height:52px;
+    padding:0 14px;
+  }
+  .logo-img{
+    height:34px;
+    filter:grayscale(0%) opacity(1) !important;
+  }
+  .proof-inner{flex-direction:column}
+  .proof-item{border-left:none;border-top:1px solid rgba(255,255,255,.08)}
+  .proof-item:first-child{border-top:none}
+  .proof-num{font-size:1.8rem}
+  .proof-label{font-size:0.75rem}
+  .steps-row{grid-template-columns:1fr}
+  .step{padding:22px 16px}
+  .step-header{margin-bottom:10px}
+  .step h3{font-size:0.95rem}
+  .step p{font-size:0.8rem}
+  .stats-grid{grid-template-columns:1fr}
+  .stat-box{border-bottom:1px solid #e5e7eb;padding:26px 16px}
+  .stat-num{font-size:2rem}
+  .stat-label{font-size:0.8rem}
+  .benefits-grid{grid-template-columns:1fr}
+  .benefit-card{padding:20px 16px}
+  .benefit-card h3{font-size:0.9rem}
+  .benefit-card p{font-size:0.8rem}
+  .testi-grid{grid-template-columns:1fr}
+  .final-section{
+    padding:50px 18px;
+  }
+  .final-section h2{
+    font-size:1.55rem;
+    margin-bottom:10px;
+  }
+  .final-sub{
+    font-size:0.92rem;
+    margin-bottom:22px;
+  }
+  #sticky-bar{flex-direction:column;gap:10px;padding:12px 14px}
+  .s-text{font-size:0.85rem}
+  .s-btn{font-size:0.8rem;padding:8px 18px}
+  .popup-box{padding:24px 16px}
+  .popup-brand{
+    width:100%;
+    max-width:260px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     1. HERO SECTION (DESKTOP)
+     Hook TOF: المشكل + الحل في جملة واحدة
+═══════════════════════════════════════════ -->
+<section class="hero">
+  <video class="hero-video" id="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="https://res.cloudinary.com/dl296lrkq/video/upload/v1777453369/Hero_gde4j5.mp4" type="video/mp4"/>
+  </video>
+  <div class="container">
+
+    <div class="hero-badge rv"><span></span>منصة التوظيف الأولى لمراكز النداء في المغرب</div>
+
+    <div class="hero-bottom-block">
+    <h1 class="rv">
+      <span class="hero-line">شحال من <em dir="ltr">candidat</em></span>
+      <span class="hero-line">عَيَّطي ليه ل <em dir="ltr">centre d'appel</em></span>
+      <span class="hero-line">وما جاكش فـ <em dir="ltr">l'entretien</em>؟</span>
+    </h1>
+
+    <p class="hero-promise rv2">
+      <span class="promise-line">منصة توظيف كتجمع لك غير المرشحين الجادين للمقابلات</span>
+      <span class="promise-line">وكتنقص لك وقت الفرز و عدم الحضور من أول أسبوع</span>
+    </p>
+
+    <div class="pain-chips rv">
+      <span class="chip">CVs غير مؤهلة</span>
+      <span class="chip">عدم الحضور في المقابلات</span>
+      <span class="chip">وقت ضائع في الفرز</span>
+      <span class="chip">مرشحين غير جاهزين</span>
+    </div>
+
+    <div class="rv">
+      <a href="https://coincarriere.com/register?type=company"
+         onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
+         class="btn">اكتشف المزيد</a>
+    </div>
+
+    <div class="trust-row rv">
+      <span class="ti"><b></b>مجاني للبدء</span>
+      <span class="ti"><b></b>لا بطاقة بنكية</span>
+      <span class="ti"><b></b>نتائج من أول أسبوع</span>
+    </div>
+
+    </div><!-- /hero-bottom-block -->
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     HERO CUSTOM (Mobile)
+═══════════════════════════════════════════ -->
+<section class="hero-custom">
+
+  <!-- الجزء الفوقي: الصورة + البادج فوقها -->
+  <div class="hero-custom-img">
+    <img
+      src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777376929/Untitled_1080_x_1920_px_1_ikpcu4.png"
+      alt="مركز النداء"
+      loading="eager"
+    />
+    <div class="hero-badge-wrap">
+      <div class="hero-badge">
+        <span></span>
+        منصة التوظيف الأولى لمراكز النداء في المغرب
+      </div>
+    </div>
+  </div>
+
+  <!-- الجزء السفلي: العنوان + النص + الزر + trust -->
+  <div class="hero-custom-content">
+    <h1 class="hero-title">
+      <span class="hero-line">شحال من <em dir="ltr">candidat</em></span>
+      <span class="hero-line">عَيَّطي ليه ل <em dir="ltr">centre d'appel</em></span>
+      <span class="hero-line">وما جاكش فـ <em dir="ltr">l'entretien</em>؟</span>
+    </h1>
+
+    <p class="hero-promise">
+      <span class="promise-line">منصة توظيف كتجمع لك غير المرشحين الجادين للمقابلات</span>
+      <span class="promise-line">وكتنقص لك وقت الفرز و عدم الحضور من أول أسبوع</span>
+    </p>
+
+    <a
+      href="https://coincarriere.com/register?type=company"
+      onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
+      class="btn hero-cta-animated"
+    >
+      اكتشف المزيد
+    </a>
+
+    <div class="hero-trust">
+      <span class="ti"><b></b>مجاني للبدء</span>
+      <span class="ti"><b></b>لا بطاقة بنكية</span>
+      <span class="ti"><b></b>نتائج من أول أسبوع</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════
+     2. SOCIAL PROOF
+     أ) أرقام  ب) شهادات عملاء  ج) شعارات شركاء
+═══════════════════════════════════════════ -->
+
+<!-- 2a. Proof numbers -->
+<div class="proof-bar">
+  <div class="container">
+    <div class="proof-inner">
+      <div class="proof-glow-inner" aria-hidden="true"></div>
+      <div class="proof-item rv"><span class="proof-num">+457</span><span class="proof-label">شركة موظِّفة نشطة</span></div>
+      <div class="proof-item rv2"><span class="proof-num">48h</span><span class="proof-label">متوسط وقت الاستجابة</span></div>
+      <div class="proof-item rv3"><span class="proof-num">70%</span><span class="proof-label">توفير في وقت الفرز</span></div>
+      <div class="proof-item rv"><span class="proof-num">95%</span><span class="proof-label">رضا مسؤولي التوظيف</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 2b. Partner logos -->
+<div class="logos-section">
+  <p class="logos-label rv">+457 مركز نداء وشركة توظيف يثقون في CoinCarrière</p>
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+
+      <!-- ── GROUP 1 (original) ── -->
+      <div class="marquee-group" aria-hidden="false">
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217924/13_wqg1ir.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217920/2_slt18x.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217917/8_f82zsk.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217916/1_aj6ety.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217917/7_fekrzc.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217914/6_kawhn7.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217914/9_eddrpi.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217911/10_svvy3t.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/3_nh5gip.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/14_tvu62j.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/12_zk15g3.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217909/11_ar5kov.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217909/4_ydrwdj.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217908/5_dxfauy.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217907/15_wywlvv.webp" alt="شعار" class="logo-img"/></div>
+      </div>
+
+      <!-- ── GROUP 2 (exact clone for seamless loop) ── -->
+      <div class="marquee-group" aria-hidden="true">
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217924/13_wqg1ir.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217920/2_slt18x.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217917/8_f82zsk.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217916/1_aj6ety.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217917/7_fekrzc.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217914/6_kawhn7.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217914/9_eddrpi.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217911/10_svvy3t.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/3_nh5gip.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/14_tvu62j.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/12_zk15g3.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217909/11_ar5kov.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217909/4_ydrwdj.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217908/5_dxfauy.webp" alt="" class="logo-img"/></div>
+        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217907/15_wywlvv.webp" alt="" class="logo-img"/></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 2c. Testimonials -->
+<section class="testimonials">
+  <div class="container center">
+    <div class="rv">
+      <span class="pill">شهادات العملاء</span>
+      <h2 class="sec-title">ماذا يقول مسؤولي التوظيف؟</h2>
+      <p class="sec-sub">مراكز النداء في المغرب كيشوفو النتائج من أول أسبوع مع CoinCarrière.</p>
+    </div>
+
+    <div class="testimonial-marquee">
+      <div class="testimonial-row">
+        <div class="testimonial-track">
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&auto=format&fit=crop&q=80" alt="منى الزوين" />
+              <div class="testimonial-meta">
+                <div class="testimonial-name">منى الزوين</div>
+                <div class="testimonial-rating">★★★★★</div>
+                <div class="testimonial-company">Atlas Contact</div>
+              </div>
+            </div>
+            <p class="testimonial-quote">منصة CoinCarrière خلات لينا الوصول للمرشحين الجادين أسرع بزاف. ولى الفلتر واضح وما بقيناش كنضيعو الوقت مع ترشيحات بعيدة على المطلوب</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&auto=format&fit=crop&q=80" alt="يونس العلوي" />
+              <div class="testimonial-meta">
+                <div class="testimonial-name">يونس العلوي</div>
+                <div class="testimonial-rating">★★★★★</div>
+                <div class="testimonial-company">CallPro Maroc</div>
+              </div>
+            </div>
+            <p class="testimonial-quote">الفرز الذكي نقص علينا بزاف ديال الوقت، وبقينا كنشوفو غير الملفات اللي فعلاً مناسبة لمراكز النداء ديالنا</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&auto=format&fit=crop&q=80" alt="سلمى بوهلال" />
+              <div class="testimonial-meta">
+                <div class="testimonial-name">سلمى بوهلال</div>
+                <div class="testimonial-rating">★★★★★</div>
+                <div class="testimonial-company">VoiceLink</div>
+              </div>
+            </div>
+            <p class="testimonial-quote">المنصة ولات كتجيب لينا مرشحين فاهمين الخدمة وموجدين للمقابلة. هاد الشي حسّن بزاف سرعة التوظيف عندنا</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&auto=format&fit=crop&q=80" alt="أمين الرازي" />
+              <div class="testimonial-meta">
+                <div class="testimonial-name">أمين الرازي</div>
+                <div class="testimonial-rating">★★★★★</div>
+                <div class="testimonial-company">Nova Call Center</div>
+              </div>
+            </div>
+            <p class="testimonial-quote">أكثر حاجة عجبتني هي التنظيم. كلش ولى واضح، ومن نهار كننشر العرض حتى كتوصلنا ملفات مؤهلة ومصنفة مزيان</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&auto=format&fit=crop&q=80" alt="هند العلمي" />
+              <div class="testimonial-meta">
+                <div class="testimonial-name">هند العلمي</div>
+                <div class="testimonial-rating">★★★★★</div>
+                <div class="testimonial-company">Connectia Services</div>
+              </div>
+            </div>
+            <p class="testimonial-quote">المرشحين اللي جاونا من CoinCarrière كانوا جادين وكيعرفو شنو باغين، وهاد الشي خفف علينا بزاف ديال الضغط فالتوظيف</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=200&h=200&auto=format&fit=crop&q=80" alt="إسماعيل بلهندة" />
+              <div class="testimonial-meta">
+                <div class="testimonial-name">إسماعيل بلهندة</div>
+                <div class="testimonial-rating">★★★★★</div>
+                <div class="testimonial-company">Maghreb Support</div>
+              </div>
+            </div>
+            <p class="testimonial-quote">السرعة ديال المنصة معززة بزاف لفرق التوظيف، وولينا كنقيسو النتائج من أول أسبوع بلا تعقيد</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════
+     3. PROCESS — 4 خطوات
+═══════════════════════════════════════════ -->
+<section class="process-section">
+  <div class="container center">
+    <div class="rv">
+      <span class="pill">كيف تعمل المنصة</span>
+      <h2 class="sec-title">من المنصب الشاغر إلى التعاقد في 4 خطوات</h2>
+      <p class="sec-sub">من اللحظة الأولى للنشر إلى التوقيع على العقد — كل شيء مُحسَّم وسلس وفعّال.</p>
+    </div>
+
+    <div class="steps-row">
+      <div class="step rv">
+        <div class="step-header">
+          <div class="step-n">1</div>
+          <h3>انشر العرض</h3>
+        </div>
+        <p>حدد المنصب والمهارات والموقع والراتب — في دقائق فقط. نشر فوري لآلاف المرشحين المؤهلين من مراكز النداء.</p>
+      </div>
+      <div class="step rv2">
+        <div class="step-header">
+          <div class="step-n">2</div>
+          <h3>فلترة ذكية تلقائية</h3>
+        </div>
+        <p>الخوارزمية تتولى الفرز عنك — فقط المرشحون المتطابقون مع متطلباتك يصلون إلى بريدك. توفير 70% من وقت الفرز اليدوي.</p>
+      </div>
+      <div class="step rv3">
+        <div class="step-header">
+          <div class="step-n">3</div>
+          <h3>قيّم وأجرِ المقابلات</h3>
+        </div>
+        <p>لوحة تتبع مركزية تضع كل مرشح في مكانه الصحيح — من المرشحين الجدد إلى المقابلة النهائية. جدول مقابلات منظم، رسائل فورية، تقييمات سهلة.</p>
+      </div>
+      <div class="step rv">
+        <div class="step-header">
+          <div class="step-n">4</div>
+          <h3>وقّع العقد فوراً</h3>
+        </div>
+        <p>أرسل العرض الوظيفي للمرشح وستحصل على ردّه في ساعات معدودة — لا انتظار، لا هدر وقت. من البحث إلى التوظيف في أقل من أسبوع.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     4. BENEFITS — الفوائد الملموسة
+═══════════════════════════════════════════ -->
+<section class="benefits-section">
+  <div class="container center">
+    <div class="rv">
+      <span class="pill">الفوائد الملموسة</span>
+      <h2 class="sec-title">ماذا تكسب فعلاً مع CoinCarrière؟</h2>
+      <p class="sec-sub">ليس وعوداً عامة — بل نتائج محددة يراها مسؤولي التوظيف من اليوم الأول</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card rv">
+        <div class="b-icon">&#9889;</div>
+        <h3>فرز ذكي بدل الفرز اليدوي</h3>
+        <p>بدل قضاء يومين كاملين في قراءة CVs — تصلك فقط الملفات المطابقة لمعاييرك مسبقاً</p>
+        <div class="benefit-result">النتيجة: توفير 70% من الوقت</div>
+      </div>
+      <div class="benefit-card rv2">
+        <div class="b-icon">&#127919;</div>
+        <h3>مرشحون متخصصون في مراكز النداء</h3>
+        <p>قاعدة بيانات حصرية لمحترفي مراكز النداء — لغات، نبرة، صبر. ليس جمهوراً عاماً</p>
+        <div class="benefit-result">النتيجة: مرشحون مؤهلون فعلاً</div>
+      </div>
+      <div class="benefit-card rv3">
+        <div class="b-icon">&#128683;</div>
+        <h3>مرشحون جادون ومستعدون</h3>
+        <p>المرشحون على المنصة يبحثون بنشاط ويؤكدون حضورهم. نسبة عدم الحضور تنخفض بشكل ملحوظ</p>
+        <div class="benefit-result">النتيجة: أقل عدم الحضور</div>
+      </div>
+      <div class="benefit-card rv">
+        <div class="b-icon">&#128203;</div>
+        <h3>إدارة مركزية للملفات</h3>
+        <p>كل المرشحين في لوحة واحدة. لا ملفات ضائعة في الإيميل، لا تنسيق بين فريق التوظيف</p>
+        <div class="benefit-result">النتيجة: قرارات أسرع</div>
+      </div>
+      <div class="benefit-card rv2">
+        <div class="b-icon">&#128202;</div>
+        <h3>تقارير أداء لمراكز النداء</h3>
+        <p>وقت التوظيف، معدل عدم الحضور، المصادر الأفضل. بيانات تساعدك على تحسين نتائجك شهرياً</p>
+        <div class="benefit-result">النتيجة: تحسين مستمر</div>
+      </div>
+      <div class="benefit-card rv3">
+        <div class="b-icon">&#128587;</div>
+        <h3>دعم متخصص في قطاعك</h3>
+        <p>فريقنا يعرف خصوصية مراكز النداء. مساعدة في كتابة العرض وتحديد معايير الفلترة المثلى</p>
+        <div class="benefit-result">النتيجة: راحة بال</div>
+      </div>
+    </div>
+
+    <div style="margin-top:44px;" class="rv">
+      <a href="https://coincarriere.com/register?type=company"
+         onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
+         class="btn">ابدأ واكسب هذه الفوائد مجاناً</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     6. STATS
+═══════════════════════════════════════════ -->
+<section class="stats-section">
+  <div class="container center">
+    <div class="rv">
+      <span class="pill">الأرقام تتحدث</span>
+      <h2 class="sec-title">النتائج التي يراها مسؤولي مراكز النداء</h2>
+      <p class="sec-sub">أرقام حقيقية من مستخدمين حقيقيين في قطاع مراكز النداء بالمغرب</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-box rv">
+        <span class="stat-num count-up" data-target="457" data-prefix="+">0</span>
+        <span class="stat-label">شركة موظِّفة نشطة</span>
+        <span class="stat-note">في قطاع مراكز النداء</span>
+      </div>
+      <div class="stat-box rv2">
+        <span class="stat-num count-up" data-target="48" data-suffix="h">0</span>
+        <span class="stat-label">متوسط وقت الاستجابة</span>
+        <span class="stat-note">من النشر إلى أول مرشح مناسب</span>
+      </div>
+      <div class="stat-box rv3">
+        <span class="stat-num count-up" data-target="95" data-suffix="%">0</span>
+        <span class="stat-label">رضا مسؤولي التوظيف</span>
+        <span class="stat-note">بناءً على آخر استطلاع ربعي</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     7. FINAL CTA
+═══════════════════════════════════════════ -->
+<section class="final-section" id="final-cta-section">
+  <div class="container center" style="position:relative;z-index:1;">
+    <div class="rv">
+      <h2>ضياع الوقت و عدم الحضور هلكوك؟</h2>
+      <p class="final-sub">
+        اكتشف طريقة الفرز الذكية:
+        CoinCarrière كتْوَصْلِك بمرشحين مناسبين بدل السير الذاتية غير المؤهلة.
+      </p>
+      <a href="https://coincarriere.com/register?type=company"
+         onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
+         class="btn" style="font-size:1.05rem;padding:16px 44px;">
+        اكتشف المزيد
+      </a>
+      <div class="trust-row">
+        <span class="ti" style="color:rgba(255,255,255,.6)"><b></b>مجاني بالكامل</span>
+        <span class="ti" style="color:rgba(255,255,255,.6)"><b></b>لا عقود ملزمة</span>
+        <span class="ti" style="color:rgba(255,255,255,.6)"><b></b>نتائج من أول أسبوع</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 CoinCarrière – منصة التوظيف الأولى لقطاع مراكز النداء في المغرب</p>
+  <div class="footer-legal">
+    <button class="footer-legal-btn" onclick="openLegal('تواصل معنا','contact')">تواصل معنا</button>
+    <span class="footer-sep">|</span>
+    <button class="footer-legal-btn" onclick="openLegal('الخصوصية','confidentialite')">الخصوصية</button>
+    <span class="footer-sep">|</span>
+    <button class="footer-legal-btn" onclick="openLegal('الشروط العامة','conditions')">الشروط العامة</button>
+  </div>
+</footer>
+
+<!-- LEGAL POPUP -->
+<div id="legal-overlay" onclick="if(event.target===this)closeLegal()">
+  <div class="legal-box">
+    <div class="legal-header">
+      <h4 id="legal-title">—</h4>
+      <button class="legal-close" onclick="closeLegal()">✕</button>
+    </div>
+    <div class="legal-body" id="legal-body-content">
+    </div>
+  </div>
+</div>
+
+<!-- LEGAL CONTENT TEMPLATES (hidden) -->
+<div id="legal-content-conditions" style="display:none">
+  <div class="legal-content-inner">
+
+    <!-- Header -->
+    <div style="text-align:center;padding:8px 0 24px;">
+      <div style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;background:#e0f0fb;border-radius:16px;margin-bottom:16px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0077B6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <h4 style="font-size:1.45rem;font-weight:900;color:#0a1929;margin-bottom:8px;">الشروط العامة للاستخدام</h4>
+      <p style="font-size:.82rem;color:#4b5563;">آخر تحديث: 19 أبريل 2026</p>
+    </div>
+    <hr style="border:none;border-top:1px solid #f0f4f8;margin-bottom:20px;"/>
+
+    <h5>1. الغرض</h5>
+    <p>تُنظِّم هذه الشروط العامة للاستخدام (المشار إليها فيما يلي بـ"الشروط") الوصولَ إلى منصة CoinCarrière واستخدامها، المتاحة على العنوان coincarriere.com، والمُشغَّلة من قِبَل شركة 9558-9321 Québec inc. (رقم السجل التجاري: 1181724304)، ومقرها الرئيسي في كيبيك، مقاطعة كيبيك، كندا.</p>
+    <p>بالنفاذ إلى المنصة أو استخدام خدماتها، فإنك توافق على الالتزام بهذه الشروط. إذا كنت لا توافق على هذه الشروط، يُرجى الامتناع عن استخدام المنصة.</p>
+
+    <h5>2. التعريفات</h5>
+    <ul>
+      <li><strong>المنصة</strong>: الموقع الإلكتروني coincarriere.com وجميع الخدمات المرتبطة به</li>
+      <li><strong>المستخدم</strong>: كل شخص يصل إلى المنصة، سواء أكان مسجَّلاً أم لا</li>
+      <li><strong>المترشح</strong>: كل مستخدم مسجَّل يستعمل المنصة للبحث عن عمل، أو إيداع سيرته الذاتية، أو التقدم لشغل الوظائف المعروضة</li>
+      <li><strong>صاحب العمل</strong>: كل شخص معنوي أو طبيعي يستخدم المنصة لنشر عروض العمل وإدارة مسارات التوظيف</li>
+      <li><strong>المسؤول عن التوظيف</strong>: كل مستخدم يتصرف نيابةً عن صاحب عمل على المنصة</li>
+      <li><strong>المحتوى</strong>: كل نص أو صورة أو ملف أو سيرة ذاتية أو عرض عمل أو أي معلومة أخرى منشورة على المنصة</li>
+      <li><strong>الخدمات</strong>: جميع الوظائف والميزات التي تتيحها المنصة</li>
+    </ul>
+
+    <h5>3. التسجيل وحساب المستخدم</h5>
+    <h6>3.1 إنشاء الحساب</h6>
+    <p>يستلزم الوصول إلى بعض الخدمات إنشاء حساب. عند التسجيل، تلتزم بـ:</p>
+    <ul>
+      <li>تقديم معلومات دقيقة وكاملة ومحدَّثة</li>
+      <li>الحفاظ على سرية بيانات تسجيل الدخول الخاصة بك</li>
+      <li>إخطارنا فوراً بأي استخدام غير مصرح به لحسابك</li>
+      <li>عدم إنشاء أكثر من حساب للشخص الواحد</li>
+    </ul>
+    <h6>3.2 الحد الأدنى للسن</h6>
+    <p>يجب أن يكون عمرك 16 عاماً على الأقل لاستخدام المنصة.</p>
+    <h6>3.3 المسؤولية عن الحساب</h6>
+    <p>أنت وحدك المسؤول عن جميع الأنشطة التي تُجرى من خلال حسابك.</p>
+
+    <h5>4. الخدمات المقدَّمة</h5>
+    <h6>4.1 للمترشحين</h6>
+    <ul>
+      <li>الاطلاع على عروض العمل المنشورة</li>
+      <li>إيداع السيرة الذاتية وإنشاء الملف المهني</li>
+      <li>التقديم الإلكتروني للوظائف المعروضة</li>
+      <li>متابعة تقدم الطلبات المُقدَّمة</li>
+      <li>استلام الإشعارات المتعلقة بالطلبات</li>
+    </ul>
+    <h6>4.2 لأصحاب العمل والمسؤولين عن التوظيف</h6>
+    <ul>
+      <li>نشر عروض العمل وإدارتها</li>
+      <li>استلام الطلبات المُقدَّمة وإدارتها</li>
+      <li>الاطلاع على السير الذاتية وملفات المترشحين</li>
+      <li>جدولة المقابلات وإدارتها</li>
+      <li>تقييم المترشحين وإدارة مسار التوظيف</li>
+      <li>أدوات التحليل وإعداد التقارير</li>
+    </ul>
+    <h6>4.3 التوافر</h6>
+    <p>تسعى CoinCarrière إلى ضمان إتاحة المنصة على مدار الساعة طوال أيام الأسبوع، دون ضمان استمرارية الوصول بصورة مطلقة.</p>
+
+    <h5>5. التزامات المستخدمين</h5>
+    <h6>5.1 الالتزامات العامة</h6>
+    <ul>
+      <li>الامتثال للقوانين والأنظمة المعمول بها</li>
+      <li>عدم نشر أي محتوى غير مشروع أو تشهيري أو تمييزي</li>
+      <li>عدم انتحال هوية شخص آخر</li>
+      <li>عدم استخدام المنصة لأغراض احتيالية</li>
+      <li>عدم استخدام البرامج الآلية أو أدوات استخراج البيانات لجمع المعلومات</li>
+    </ul>
+    <h6>5.2 التزامات المترشحين</h6>
+    <ul>
+      <li>تقديم معلومات صادقة في السيرة الذاتية والملف الشخصي</li>
+      <li>احترام سرية مسارات التوظيف</li>
+    </ul>
+    <h6>5.3 التزامات أصحاب العمل</h6>
+    <ul>
+      <li>نشر عروض عمل حقيقية ومشروعة وخالية من أي تمييز</li>
+      <li>الالتزام بتشريعات العمل المطبَّقة</li>
+      <li>معالجة بيانات المترشحين وفق قوانين حماية المعلومات الشخصية المعمول بها</li>
+    </ul>
+
+    <h5>6. المحتوى المنشور من قِبَل المستخدمين</h5>
+    <p>تحتفظ بملكية محتواك. بنشره، فإنك تمنح CoinCarrière ترخيصاً غير حصري ومجانياً لاستخدامه في إطار تقديم الخدمات. وأنت وحدك المسؤول عن دقته ومشروعيته.</p>
+
+    <h5>7. الملكية الفكرية</h5>
+    <p>جميع عناصر المنصة (التصميم والشعارات والشفرة المصدرية) هي ملك حصري لشركة 9558-9321 Québec inc. ويُحظر تماماً أي تكرار غير مصرح به.</p>
+
+    <h5>8. تحديد المسؤولية</h5>
+    <p>تعمل CoinCarrière بوصفها وسيطاً تقنياً، ولا تضمن الحصول على وظيفة أو مستوى جودة المترشحين. وتُقيَّد المسؤولية الإجمالية لـCoinCarrière بحد أقصى قدره 100 دولار كندي أو المبلغ المدفوع خلال الاثني عشر شهراً الأخيرة، أيهما أعلى.</p>
+
+    <h5>9. التعليق والإنهاء</h5>
+    <p>يمكنك حذف حسابك في أي وقت عبر التواصل على <a href="mailto:contact@coincarriere.com" style="color:#0077B6">contact@coincarriere.com</a>. يحق لـCoinCarrière تعليق وصولك في حال الإخلال بهذه الشروط.</p>
+
+    <h5>10. حماية المعلومات الشخصية</h5>
+    <p>تخضع جمع بياناتك لسياسة الخصوصية المُدرجة في هذه الشروط والمشكِّلة جزءاً لا يتجزأ منها.</p>
+
+    <h5>11. تعديل الشروط</h5>
+    <p>تحتفظ CoinCarrière بحق تعديل هذه الشروط في أي وقت. واستمرارك في استخدام المنصة يُعدّ قبولاً ضمنياً للتعديلات.</p>
+
+    <h5>12. القانون المطبَّق</h5>
+    <p>تخضع هذه الشروط لقوانين مقاطعة كيبيك والقوانين الفيدرالية الكندية. وتُحال أي نزاعات إلى المحاكم المختصة في الدائرة القضائية لكيبيك، كندا.</p>
+
+    <h5>17. التواصل</h5>
+    <p>📧 <a href="mailto:contact@coincarriere.com" style="color:#0077B6">contact@coincarriere.com</a><br/>
+    9558-9321 Québec inc. (CoinCarrière) — كيبيك، مقاطعة كيبيك، كندا</p>
+  </div>
+</div>
+
+<div id="legal-content-contact" style="display:none">
+  <div class="legal-content-inner" style="padding:0;direction:rtl;text-align:right;">
+
+    <!-- Header -->
+    <div style="text-align:center;padding:32px 28px 24px;">
+      <div style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;background:#e0f0fb;border-radius:16px;margin-bottom:16px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0077B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </div>
+      <h4 style="font-size:1.45rem;font-weight:900;color:#0a1929;margin-bottom:8px;">تواصل معنا</h4>
+      <p style="font-size:.9rem;color:#1a1a1a;line-height:1.7;">يسعدنا الإجابة على جميع أسئلتكم وطلباتكم.</p>
+    </div>
+
+    <!-- Form card -->
+    <div style="background:#fff;border:1px solid #e5e9f0;border-radius:16px;padding:28px 24px;margin:0 20px 28px;">
+
+      <div id="contact-form-wrap">
+        <!-- Row 1 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+          <div>
+            <label style="display:block;font-size:.82rem;font-weight:700;color:#374151;margin-bottom:6px;">الاسم الكامل <span style="color:#ef4444">*</span></label>
+            <input id="cf-name" type="text" placeholder="" style="width:100%;padding:10px 13px;border:1.5px solid #d1d5db;border-radius:8px;font-size:.9rem;font-family:'Cairo',sans-serif;outline:none;transition:border .2s;color:#111827;background:#fff;direction:rtl;" onfocus="this.style.borderColor='#0077B6'" onblur="this.style.borderColor='#d1d5db'"/>
+          </div>
+          <div>
+            <label style="display:block;font-size:.82rem;font-weight:700;color:#374151;margin-bottom:6px;">البريد الإلكتروني <span style="color:#ef4444">*</span></label>
+            <input id="cf-email" type="email" placeholder="" style="width:100%;padding:10px 13px;border:1.5px solid #d1d5db;border-radius:8px;font-size:.9rem;font-family:'Cairo',sans-serif;outline:none;transition:border .2s;color:#111827;background:#fff;direction:ltr;text-align:right;" onfocus="this.style.borderColor='#0077B6'" onblur="this.style.borderColor='#d1d5db'"/>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+          <div>
+            <label style="display:block;font-size:.82rem;font-weight:700;color:#374151;margin-bottom:6px;">رقم الهاتف</label>
+            <input id="cf-phone" type="tel" placeholder="" style="width:100%;padding:10px 13px;border:1.5px solid #d1d5db;border-radius:8px;font-size:.9rem;font-family:'Cairo',sans-serif;outline:none;transition:border .2s;color:#111827;background:#fff;direction:ltr;text-align:right;" onfocus="this.style.borderColor='#0077B6'" onblur="this.style.borderColor='#d1d5db'"/>
+          </div>
+          <div>
+            <label style="display:block;font-size:.82rem;font-weight:700;color:#374151;margin-bottom:6px;">الموضوع</label>
+            <input id="cf-subject" type="text" placeholder="" style="width:100%;padding:10px 13px;border:1.5px solid #d1d5db;border-radius:8px;font-size:.9rem;font-family:'Cairo',sans-serif;outline:none;transition:border .2s;color:#111827;background:#fff;direction:rtl;" onfocus="this.style.borderColor='#0077B6'" onblur="this.style.borderColor='#d1d5db'"/>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div style="margin-bottom:20px;">
+          <label style="display:block;font-size:.82rem;font-weight:700;color:#374151;margin-bottom:6px;">الرسالة <span style="color:#ef4444">*</span></label>
+          <textarea id="cf-message" rows="5" placeholder="" style="width:100%;padding:10px 13px;border:1.5px solid #d1d5db;border-radius:8px;font-size:.9rem;font-family:'Cairo',sans-serif;outline:none;transition:border .2s;resize:vertical;color:#111827;background:#fff;line-height:1.6;direction:rtl;" onfocus="this.style.borderColor='#0077B6'" onblur="this.style.borderColor='#d1d5db'"></textarea>
+        </div>
+
+        <!-- Error msg -->
+        <div id="cf-error" style="display:none;color:#ef4444;font-size:.82rem;margin-bottom:12px;padding:10px 14px;background:#fef2f2;border-radius:8px;border:1px solid #fecaca;"></div>
+
+        <!-- Footer row -->
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+          <span style="font-size:.78rem;color:#4b5563;">* الحقول الإلزامية</span>
+          <button id="cf-submit-btn" onclick="submitContactForm()" style="display:inline-flex;align-items:center;gap:8px;background:#0077B6;color:#fff;font-weight:700;font-size:.92rem;padding:12px 28px;border-radius:10px;border:none;cursor:pointer;font-family:'Cairo',sans-serif;transition:background .2s,transform .15s;box-shadow:0 4px 14px rgba(0,119,182,.3);" onmouseover="this.style.background='#005f8e'" onmouseout="this.style.background='#0077B6'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            إرسال
+          </button>
+        </div>
+      </div>
+
+      <!-- Success state -->
+      <div id="cf-success" style="display:none;text-align:center;padding:32px 16px;">
+        <div style="width:56px;height:56px;background:#d1fae5;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h5 style="font-size:1.1rem;font-weight:800;color:#0a1929;margin-bottom:8px;">تم إرسال رسالتك!</h5>
+        <p style="font-size:.88rem;color:#1a1a1a;line-height:1.7;">شكراً على تواصلكم معنا. سنرد عليكم في أقرب وقت ممكن على <strong id="cf-confirm-email"></strong>.</p>
+        <button onclick="resetContactForm()" style="margin-top:18px;background:none;border:1.5px solid #d1d5db;color:#374151;font-size:.85rem;font-weight:600;padding:9px 22px;border-radius:8px;cursor:pointer;font-family:'Cairo',sans-serif;">إرسال رسالة أخرى</button>
+      </div>
+
+    </div><!-- /card -->
+
+  </div>
+</div>
+
+<script>
+function submitContactForm() {
+  const name    = document.getElementById('cf-name').value.trim();
+  const email   = document.getElementById('cf-email').value.trim();
+  const phone   = document.getElementById('cf-phone').value.trim();
+  const subject = document.getElementById('cf-subject').value.trim();
+  const message = document.getElementById('cf-message').value.trim();
+  const errEl   = document.getElementById('cf-error');
+  const btn     = document.getElementById('cf-submit-btn');
+
+  errEl.style.display = 'none';
+  if (!name)    { showCFError('الرجاء إدخال اسمك الكامل.'); return; }
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showCFError('الرجاء إدخال بريد إلكتروني صحيح.'); return; }
+  if (!message) { showCFError('الرجاء إدخال رسالتك.'); return; }
+
+  btn.disabled = true;
+  btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation:spin .8s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> جاري الإرسال…';
+
+  const bodyText =
+    'الاسم: ' + name + '\n' +
+    'البريد الإلكتروني: ' + email + '\n' +
+    (phone ? 'الهاتف: ' + phone + '\n' : '') +
+    '\nالرسالة:\n' + message;
+
+  const mailtoLink =
+    'mailto:contact@coincarriere.com' +
+    '?subject=' + encodeURIComponent(subject || 'تواصل عبر CoinCarrière') +
+    '&body=' + encodeURIComponent(bodyText);
+
+  window.location.href = mailtoLink;
+
+  setTimeout(function() {
+    document.getElementById('contact-form-wrap').style.display = 'none';
+    document.getElementById('cf-success').style.display = 'block';
+    document.getElementById('cf-confirm-email').textContent = email;
+  }, 900);
+}
+
+function showCFError(msg) {
+  const e = document.getElementById('cf-error');
+  e.textContent = msg;
+  e.style.display = 'block';
+}
+
+function resetContactForm() {
+  ['cf-name','cf-email','cf-phone','cf-subject','cf-message'].forEach(function(id){
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('cf-error').style.display = 'none';
+  document.getElementById('cf-success').style.display = 'none';
+  document.getElementById('contact-form-wrap').style.display = 'block';
+  const btn = document.getElementById('cf-submit-btn');
+  btn.disabled = false;
+  btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> إرسال';
+}
+</script>
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+@media(max-width:560px){
+  #legal-content-contact [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+<div id="legal-content-confidentialite" style="display:none">
+  <div class="legal-content-inner">
+
+    <!-- Header -->
+    <div style="text-align:center;padding:8px 0 24px;">
+      <div style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;background:#e0f0fb;border-radius:16px;margin-bottom:16px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0077B6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <h4 style="font-size:1.45rem;font-weight:900;color:#0a1929;margin-bottom:8px;">سياسة الخصوصية</h4>
+      <p style="font-size:.82rem;color:#4b5563;">آخر تحديث: 19 أبريل 2026</p>
+    </div>
+    <hr style="border:none;border-top:1px solid #f0f4f8;margin-bottom:20px;"/>
+
+    <h5>1. هوية المسؤول عن معالجة البيانات</h5>
+    <p>يُشغَّل الموقع الإلكتروني coincarriere.com (المشار إليه فيما يلي بـ"CoinCarrière" أو "المنصة") من قِبَل:</p>
+    <p><strong>الاسم التجاري:</strong> 9558-9321 Québec inc.، المعروفة باسم CoinCarrière<br/>
+    <strong>رقم السجل التجاري:</strong> 1181724304<br/>
+    <strong>المقر الرئيسي:</strong> كيبيك، مقاطعة كيبيك، كندا<br/>
+    <strong>البريد الإلكتروني:</strong> <a href="mailto:contact@coincarriere.com" style="color:#0077B6">contact@coincarriere.com</a><br/>
+    <strong>الموقع الإلكتروني:</strong> <a href="https://coincarriere.com" style="color:#0077B6">https://coincarriere.com</a></p>
+    <p>المسؤول عن حماية المعلومات الشخصية هو أعلى مسؤول تنفيذي في الشركة، ويمكن التواصل معه عبر العنوان المذكور أعلاه.</p>
+
+    <h5>2. نطاق التطبيق</h5>
+    <p>تسري هذه السياسة على جميع مستخدمي المنصة، سواء أكانوا مترشحين أم مسؤولين عن التوظيف أم أصحاب عمل أم زوار عاديين، وذلك بصرف النظر عن موقع إقامتهم. وتشمل جميع المعلومات الشخصية التي يتم جمعها عبر الموقع الإلكتروني والنماذج وإيداع السيرة الذاتية وإنشاء الحساب واستخدام خدمات التوظيف.</p>
+    <p>تلتزم CoinCarrière بالقوانين المعمول بها في مجال حماية المعلومات الشخصية، ولا سيما:</p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li>قانون حماية المعلومات الشخصية في القطاع الخاص بمقاطعة كيبيك (RLRQ, c. P-39.1)، بصيغته المُحدَّثة بموجب القانون رقم 25</li>
+      <li>قانون حماية المعلومات الشخصية والوثائق الإلكترونية (LPRPDE) الكندي</li>
+      <li>اللائحة الأوروبية العامة لحماية البيانات (RGPD)، للمستخدمين المقيمين في المنطقة الاقتصادية الأوروبية</li>
+      <li>القانون رقم 09-08 المتعلق بحماية الأشخاص الذاتيين تجاه معالجة المعطيات ذات الطابع الشخصي بالمغرب، للمستخدمين المقيمين في المغرب</li>
+    </ul>
+
+    <h5>3. المعلومات الشخصية المُجمَعة</h5>
+    <p><strong>3.1 المعلومات المُقدَّمة مباشرةً من المستخدم</strong></p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li><strong>بيانات الهوية:</strong> الاسم الأول واللقب والبريد الإلكتروني ورقم الهاتف</li>
+      <li><strong>المعلومات المهنية:</strong> السيرة الذاتية وخطاب التقديم والخبرة المهنية والتعليم والمهارات والشهادات</li>
+      <li><strong>معلومات الملف الشخصي:</strong> المدينة والبلد وحساب LinkedIn والموقع الإلكتروني الشخصي</li>
+      <li><strong>بيانات الحساب:</strong> بيانات تسجيل الدخول وكلمة المرور (مُشفَّرة) وتفضيلات الإشعارات</li>
+      <li><strong>المراسلات:</strong> الرسائل المتبادلة عبر المنصة والردود على نماذج التقديم</li>
+    </ul>
+    <p><strong>3.2 المعلومات التي يتم جمعها تلقائياً</strong></p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li><strong>البيانات التقنية:</strong> عنوان IP ونوع المتصفح وإصداره ونظام التشغيل ودقة الشاشة</li>
+      <li><strong>بيانات التصفح:</strong> الصفحات المُزارة ومدة الزيارات والصفحات المُحيلة ومسار التنقل</li>
+      <li><strong>ملفات تعريف الارتباط (Cookies):</strong> ملفات الجلسة والملفات التحليلية والملفات الإعلانية (انظر القسم 8)</li>
+      <li><strong>بيانات الموقع الجغرافي:</strong> البلد والمنطقة المُستنتَجة من عنوان IP</li>
+    </ul>
+    <p><strong>3.3 المعلومات المُستلَمة من أطراف ثالثة</strong></p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li>المعلومات التي يُرسلها صاحب عمل أو مسؤول توظيف يُنشئ ملف مترشح في إطار مسار التوظيف</li>
+      <li>المعلومات المُستقاة من المصادر العامة (عروض العمل المنشورة على مواقع طرف ثالث)</li>
+    </ul>
+
+    <h5>4. أغراض المعالجة وأسسها القانونية</h5>
+    <div style="overflow-x:auto;margin-bottom:16px;">
+      <table style="width:100%;border-collapse:collapse;font-size:.85rem;">
+        <thead>
+          <tr style="background:#f1f5f9;">
+            <th style="padding:10px 14px;text-align:right;border:1px solid #e2e8f0;font-weight:700;color:#0a1929;">الغرض</th>
+            <th style="padding:10px 14px;text-align:right;border:1px solid #e2e8f0;font-weight:700;color:#0a1929;">الأساس القانوني</th>
+          </tr>
+        </thead>
+        <tbody style="color:#374151;line-height:1.7;">
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">تقديم خدمات التوظيف (التواصل بين المترشحين وأصحاب العمل)</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">تنفيذ العقد</td></tr>
+          <tr style="background:#f8fafc;"><td style="padding:9px 14px;border:1px solid #e2e8f0;">إنشاء حسابات المستخدمين وإدارتها</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">تنفيذ العقد</td></tr>
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">إتاحة إيداع السير الذاتية والاطلاع عليها</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">الموافقة</td></tr>
+          <tr style="background:#f8fafc;"><td style="padding:9px 14px;border:1px solid #e2e8f0;">إرسال الطلبات إلى أصحاب العمل</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">الموافقة</td></tr>
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">إرسال إشعارات متعلقة بالطلبات</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">تنفيذ العقد</td></tr>
+          <tr style="background:#f8fafc;"><td style="padding:9px 14px;border:1px solid #e2e8f0;">إرسال الاتصالات التسويقية والنشرات الإخبارية</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">الموافقة</td></tr>
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">تحسين المنصة وتحليل استخدامها</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">المصلحة المشروعة</td></tr>
+          <tr style="background:#f8fafc;"><td style="padding:9px 14px;border:1px solid #e2e8f0;">منع الاحتيال وضمان الأمان</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">المصلحة المشروعة</td></tr>
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">الامتثال للالتزامات القانونية والتنظيمية</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">الالتزام القانوني</td></tr>
+          <tr style="background:#f8fafc;"><td style="padding:9px 14px;border:1px solid #e2e8f0;">الرد على الاستفسارات وتقديم الدعم</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">المصلحة المشروعة</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h5>5. مشاركة المعلومات وإفصاحها</h5>
+    <p><strong>5.1 أصحاب العمل والمسؤولون عن التوظيف</strong><br/>عند تقديم طلب للوظيفة أو إيداع سيرتك الذاتية، يتم إرسال معلوماتك المهنية (السيرة الذاتية وبيانات التواصل والخبرة) إلى أصحاب العمل المعنيين لمعالجة طلبك. ويلتزم أصحاب العمل بالحفاظ على سرية هذه المعلومات.</p>
+    <p><strong>5.2 المعالِجون من الباطن ومزودو الخدمات</strong></p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li><strong>Cloudflare, Inc.</strong> (سان فرانسيسكو، الولايات المتحدة الأمريكية) — الاستضافة وتخزين الملفات (R2) وقواعد البيانات (D1) وشبكة توزيع المحتوى (CDN)</li>
+      <li><strong>Google LLC</strong> (الولايات المتحدة الأمريكية) — Google Analytics (تحليل حركة المرور) وGoogle Ads (الإعلانات)</li>
+      <li><strong>Meta Platforms, Inc.</strong> (الولايات المتحدة الأمريكية) — إعلانات Facebook (الإعلانات)</li>
+      <li><strong>Amazon Web Services</strong> (الولايات المتحدة الأمريكية) — إرسال رسائل البريد الإلكتروني التعاملية (SES)</li>
+    </ul>
+    <p>لا يستخدم هؤلاء المعالِجون بياناتك إلا في إطار الخدمات التي يقدمونها لنا، ويخضعون لالتزامات تعاقدية صارمة في مجال السرية.</p>
+    <p><strong>5.3 الجهات القانونية المختصة</strong><br/>قد نُفصح عن معلوماتك للجهات المختصة حين يستوجبه القانون أو في إطار إجراء قضائي أو لحماية حقوقنا القانونية.</p>
+    <p><strong>5.4 ما لا نقوم به</strong><br/>لا نبيع معلوماتك الشخصية لأي طرف ثالث تحت أي ظرف، ولا نؤجرها أو نتبادلها أو نُحوِّلها إلى مصدر دخل.</p>
+
+    <h5>6. النقل خارج كيبيك وكندا</h5>
+    <p>يقع بعض معالِجينا من الباطن في الولايات المتحدة الأمريكية (Cloudflare وGoogle وMeta وAWS)، مما يعني أن معلوماتك الشخصية قد تُنقل وتُعالَج خارج كيبيك وكندا.</p>
+    <p>وفقاً للقانون رقم 25، نُجري قبل أي عملية نقل تقييماً لعوامل الخصوصية (EFVP) للتحقق من أن المعلومات ستحظى بحماية كافية، وتُنظَّم هذه عمليات النقل بموجب بنود تعاقدية ملائمة.</p>
+    <p>بالنسبة للمستخدمين المقيمين في الاتحاد الأوروبي، تُنجز هذه عمليات النقل استناداً إلى البنود التعاقدية النموذجية المعتمَدة من المفوضية الأوروبية أو أي ضمانة أخرى ينص عليها اللائحة الأوروبية العامة لحماية البيانات (RGPD).</p>
+
+    <h5>7. الاحتفاظ بالمعلومات</h5>
+    <div style="overflow-x:auto;margin-bottom:16px;">
+      <table style="width:100%;border-collapse:collapse;font-size:.85rem;">
+        <thead>
+          <tr style="background:#f1f5f9;">
+            <th style="padding:10px 14px;text-align:right;border:1px solid #e2e8f0;font-weight:700;color:#0a1929;">نوع البيانات</th>
+            <th style="padding:10px 14px;text-align:right;border:1px solid #e2e8f0;font-weight:700;color:#0a1929;">مدة الاحتفاظ</th>
+          </tr>
+        </thead>
+        <tbody style="color:#374151;line-height:1.7;">
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">السير الذاتية المُودَعة</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">5 سنوات من تاريخ الإيداع أو آخر تحديث</td></tr>
+          <tr style="background:#f8fafc;"><td style="padding:9px 14px;border:1px solid #e2e8f0;">حسابات المترشحين</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">5 سنوات بعد آخر تسجيل دخول</td></tr>
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">حسابات أصحاب العمل / المسؤولين عن التوظيف</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">مدة العلاقة التعاقدية + 3 سنوات</td></tr>
+          <tr style="background:#f8fafc;"><td style="padding:9px 14px;border:1px solid #e2e8f0;">بيانات الطلبات المُقدَّمة</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">5 سنوات بعد إغلاق المنصب</td></tr>
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">سجلات المراجعة</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">3 سنوات</td></tr>
+          <tr style="background:#f8fafc;"><td style="padding:9px 14px;border:1px solid #e2e8f0;">البيانات التحليلية (مُجهَّلة)</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">26 شهراً</td></tr>
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">المراسلات / الرسائل</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">5 سنوات</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>عند انتهاء هذه المدد، تُحذف المعلومات أو تُجهَّل بصورة لا رجعة فيها. يمكنك في أي وقت طلب حذف بياناتك مبكراً (انظر القسم 9).</p>
+
+    <h5>8. ملفات تعريف الارتباط (Cookies) وتقنيات التتبع</h5>
+    <p><strong>8.1 فئات ملفات تعريف الارتباط المُستخدَمة</strong></p>
+    <div style="overflow-x:auto;margin-bottom:16px;">
+      <table style="width:100%;border-collapse:collapse;font-size:.85rem;">
+        <thead>
+          <tr style="background:#f1f5f9;">
+            <th style="padding:10px 14px;text-align:right;border:1px solid #e2e8f0;font-weight:700;color:#0a1929;">الفئة</th>
+            <th style="padding:10px 14px;text-align:right;border:1px solid #e2e8f0;font-weight:700;color:#0a1929;">الغرض</th>
+            <th style="padding:10px 14px;text-align:right;border:1px solid #e2e8f0;font-weight:700;color:#0a1929;">المدة</th>
+            <th style="padding:10px 14px;text-align:right;border:1px solid #e2e8f0;font-weight:700;color:#0a1929;">المزوِّد</th>
+          </tr>
+        </thead>
+        <tbody style="color:#374151;line-height:1.7;">
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">ضرورية</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">المصادقة والأمان وعمل الموقع</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">جلسة / 7 أيام</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">CoinCarrière</td></tr>
+          <tr style="background:#f8fafc;"><td style="padding:9px 14px;border:1px solid #e2e8f0;">تحليلية</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">قياس الزيارات وتحسين الخدمة</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">26 شهراً</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">Google Analytics</td></tr>
+          <tr><td style="padding:9px 14px;border:1px solid #e2e8f0;">إعلانية</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">الإعلانات المخصَّصة وقياس الأداء</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">90 يوماً</td><td style="padding:9px 14px;border:1px solid #e2e8f0;">Google Ads, Meta Ads</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>8.2 إدارة ملفات تعريف الارتباط</strong><br/>يمكنك في أي وقت تعديل تفضيلاتك المتعلقة بملفات تعريف الارتباط عبر إعدادات متصفحك أو أدوات إلغاء تفعيل Google Analytics أو إعدادات الإعلانات في حسابك على Google أو Facebook. قد يؤثر رفض ملفات تعريف الارتباط الضرورية في عمل المنصة.</p>
+
+    <h5>9. حقوقك</h5>
+    <p><strong>لجميع المستخدمين (القانون 25 / LPRPDE)</strong></p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li><strong>حق الوصول:</strong> التحقق من أننا نحتفظ بمعلوماتك والحصول على نسخة منها</li>
+      <li><strong>حق التصحيح:</strong> تصحيح المعلومات غير الدقيقة أو الناقصة أو الملتبسة</li>
+      <li><strong>حق الحذف:</strong> طلب حذف معلوماتك حين لا تعود هناك حاجة إليها</li>
+      <li><strong>حق سحب الموافقة:</strong> سحب موافقة سبق منحها في أي وقت</li>
+      <li><strong>حق إلغاء الفهرسة:</strong> طلب وقف نشر معلوماتك</li>
+      <li><strong>حق قابلية النقل:</strong> استلام معلوماتك في صيغة تقنية منظَّمة وشائعة الاستخدام</li>
+    </ul>
+    <p><strong>حقوق إضافية للمستخدمين في الاتحاد الأوروبي / المنطقة الاقتصادية الأوروبية (RGPD)</strong></p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li><strong>حق الاعتراض:</strong> الاعتراض على المعالجة القائمة على المصلحة المشروعة</li>
+      <li><strong>حق التقييد:</strong> طلب تقييد المعالجة في حالات بعينها</li>
+      <li><strong>حق تقديم شكوى:</strong> أمام هيئة الرقابة المختصة (مثل CNIL في فرنسا)</li>
+    </ul>
+    <p><strong>حقوق إضافية للمستخدمين في المغرب (القانون 09-08)</strong></p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li><strong>حق الاعتراض:</strong> الاعتراض لأسباب مشروعة على معالجة بياناتك</li>
+      <li><strong>حق تقديم شكوى:</strong> أمام اللجنة الوطنية لمراقبة حماية المعطيات ذات الطابع الشخصي (CNDP)</li>
+    </ul>
+    <p><strong>كيفية ممارسة حقوقك</strong><br/>أرسل طلبك إلى <a href="mailto:contact@coincarriere.com" style="color:#0077B6">contact@coincarriere.com</a> مع ذكر اسمك وعنوان بريدك الإلكتروني والحق الذي تودّ ممارسته. سنردّ خلال مدة أقصاها 30 يوماً.</p>
+
+    <h5>10. أمان المعلومات</h5>
+    <p>نُطبِّق تدابير أمنية تقنية وتنظيمية مناسبة لحماية معلوماتك الشخصية، تشمل على وجه الخصوص:</p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li>تشفير كلمات المرور (تجزئة لا رجعة فيها)</li>
+      <li>تشفير الاتصالات (HTTPS/TLS)</li>
+      <li>المصادقة عبر رموز آمنة (JWT) مع تاريخ انتهاء صلاحية</li>
+      <li>عزل البيانات لكل مؤسسة (هندسة متعددة المستأجرين)</li>
+      <li>التحكم في الوصول وفق الأدوار (RBAC)</li>
+      <li>سجلات مراجعة على جميع العمليات الحساسة</li>
+      <li>تحديد معدل الطلبات (Rate Limiting)</li>
+      <li>نسخ احتياطية منتظمة للبيانات</li>
+    </ul>
+    <p>على الرغم من هذه التدابير، لا توجد طريقة نقل أو تخزين إلكتروني آمنة بالكامل. في حال وقوع أي حادثة تمسّ الخصوصية، سنُخطرك بها وفقاً للقوانين المعمول بها.</p>
+
+    <h5>11. حماية القاصرين</h5>
+    <p>المنصة موجَّهة للأشخاص الذين بلغوا 16 عاماً فأكثر. لا نجمع عن قصد أي معلومات شخصية تخص أشخاصاً دون هذه السن. إذا علمنا بأننا جمعنا معلومات عن قاصر، فسنعمل على حذفها في أقرب وقت ممكن.</p>
+
+    <h5>12. حوادث الخصوصية</h5>
+    <p>وفقاً للقانون رقم 25، في حال وقوع حادثة خصوصية تنطوي على خطر ضرر جسيم، سنقوم بـ:</p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li>اتخاذ التدابير المعقولة للحدّ من المخاطر ومنع وقوع حوادث مماثلة</li>
+      <li>إخطار لجنة الوصول إلى المعلومات في كيبيك (CAI)</li>
+      <li>إخطار الأشخاص المتضررين</li>
+      <li>الاحتفاظ بسجل بالحادثة</li>
+    </ul>
+
+    <h5>13. تعديل هذه السياسة</h5>
+    <p>قد نُحدِّث سياسة الخصوصية هذه بصفة دورية. في حال أي تعديل جوهري، سنُعلمك بذلك عبر البريد الإلكتروني أو إشعار بارز على المنصة. يُشار إلى تاريخ آخر تحديث في أعلى هذه الصفحة.</p>
+
+    <h5>14. التواصل</h5>
+    <p>لأي استفسار يتعلق بهذه السياسة أو لممارسة حقوقك:</p>
+    <p>📧 <a href="mailto:contact@coincarriere.com" style="color:#0077B6">contact@coincarriere.com</a><br/>
+    9558-9321 Québec inc. (CoinCarrière) — كيبيك، مقاطعة كيبيك، كندا</p>
+    <p>إذا كنت ترى أن حقوقك لم تُحترَم، يمكنك تقديم شكوى إلى:</p>
+    <ul style="padding-right:20px;color:#374151;line-height:2">
+      <li><strong>كيبيك:</strong> لجنة الوصول إلى المعلومات في كيبيك (CAI) — <a href="https://cai.gouv.qc.ca" style="color:#0077B6">cai.gouv.qc.ca</a></li>
+      <li><strong>كندا:</strong> مفوضية الخصوصية في كندا — <a href="https://priv.gc.ca" style="color:#0077B6">priv.gc.ca</a></li>
+      <li><strong>الاتحاد الأوروبي:</strong> هيئة الرقابة في بلد إقامتك</li>
+      <li><strong>المغرب:</strong> اللجنة الوطنية لمراقبة حماية المعطيات ذات الطابع الشخصي (CNDP) — <a href="https://cndp.ma" style="color:#0077B6">cndp.ma</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     STICKY BAR
+═══════════════════════════════════════════ -->
+<div id="sticky-bar">
+  <span class="s-text">ضياع الوقت و عدم الحضور؟ جرب الفرز الذكي مجاناً</span>
+  <a href="https://coincarriere.com/register?type=company"
+     onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
+     class="s-btn">اكتشف المزيد</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     EXIT POPUP
+═══════════════════════════════════════════ -->
+<div id="exit-overlay" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(10,25,41,.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;">
+  <div class="popup-box">
+    <button class="popup-close" id="close-popup">&#x2715;</button>
+    <div class="popup-brand">
+      <img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777291285/1762829178875-w23oav1d4pb_wgqrdo.png" alt="CoinCarrière logo" class="popup-brand-img"/>
+    </div>
+    <h3 style="font-size:1.2rem;font-weight:900;color:#0a1929;margin-bottom:10px;line-height:1.4;">
+      انتظر — وقتك غالي أكثر من هذا
+    </h3>
+    <p style="font-size:.88rem;color:#4b5563;line-height:1.85;margin-bottom:4px;">
+      كل يوم بدون CoinCarrière = يوم آخر من فرز CVs غير مناسبة<br/>
+      و عدم الحضور في المقابلات
+    </p>
+    <div class="popup-hi">التسجيل مجاني — ابدأ وشوف الفرق من أول أسبوع</div>
+    <a href="https://coincarriere.com/register?type=company"
+       onclick="if(typeof fbq!=='undefined')fbq('track','Lead');document.getElementById('exit-overlay').style.display='none';"
+       class="btn" style="display:block;margin-bottom:12px;font-size:.95rem;padding:13px;">
+      اكتشف الحل مجاناً الآن
+    </a>
+    <button onclick="document.getElementById('exit-overlay').style.display='none';"
+      style="background:none;border:none;cursor:pointer;font-size:.8rem;color:#4b5563;font-family:'Cairo',sans-serif;">
+      لا شكراً، سأستمر في الفرز اليدوي
+    </button>
+  </div>
+</div>
+
+
+<script>
+  // ── Scroll Reveal ──────────────────────────────
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
+    });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.rv,.rv2,.rv3').forEach(el => obs.observe(el));
+
+  // ── Count Up Stats ─────────────────────────────
+  const statsSection = document.querySelector('.stats-section');
+  const countUpElements = document.querySelectorAll('.count-up');
+  let statsAnimated = false;
+
+  function animateCountUp(element) {
+    const target = Number(element.dataset.target || 0);
+    const prefix = element.dataset.prefix || '';
+    const suffix = element.dataset.suffix || '';
+    const duration = 1500;
+    const startTime = performance.now();
+
+    function frame(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * eased);
+      element.textContent = `${prefix}${current}${suffix}`;
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        element.textContent = `${prefix}${target}${suffix}`;
+      }
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  function startStatsCountUp() {
+    if (statsAnimated || !countUpElements.length) return;
+    statsAnimated = true;
+    countUpElements.forEach((element) => {
+      element.textContent = '0';
+      animateCountUp(element);
+    });
+  }
+
+  if (statsSection && 'IntersectionObserver' in window) {
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startStatsCountUp();
+          statsObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.35 });
+
+    statsObserver.observe(statsSection);
+  } else {
+    window.addEventListener('load', startStatsCountUp, { once: true });
+  }
+
+  // ── Sticky Bar ─────────────────────────────────
+  const bar = document.getElementById('sticky-bar');
+  const finalSec = document.getElementById('final-cta-section');
+  function updateBar() {
+    const y = window.scrollY;
+    const fTop = finalSec ? finalSec.getBoundingClientRect().top + y : Infinity;
+    const atFinal = (y + window.innerHeight) >= fTop + 60;
+    bar.style.transform = (y > 260 && !atFinal) ? 'translateY(0)' : 'translateY(100%)';
+  }
+  window.addEventListener('scroll', updateBar, {passive:true});
+  window.addEventListener('resize', updateBar, {passive:true});
+
+  // ── Exit Intent ────────────────────────────────
+  let popShown = false;
+  const ov = document.getElementById('exit-overlay');
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY <= 5 && !popShown) { popShown=true; ov.style.display='flex'; }
+  });
+  let lastY = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (!popShown && y < lastY - 250 && y < 400) { popShown=true; ov.style.display='flex'; }
+    lastY = y;
+  }, {passive:true});
+  document.getElementById('close-popup').addEventListener('click', () => ov.style.display='none');
+  ov.addEventListener('click', e => { if(e.target===ov) ov.style.display='none'; });
+
+  // ── Testimonials Marquee ──────────────────────────────
+  const testimonialTracks = document.querySelectorAll('.testimonial-track');
+  function setupTestimonialsMarquee() {
+    testimonialTracks.forEach((track) => {
+      track.querySelectorAll('[data-testimonial-clone="true"]').forEach(node => node.remove());
+      const originalCards = Array.from(track.children).filter((node) => node.getAttribute('data-testimonial-clone') !== 'true');
+      const cloneCycles = 3;
+      for (let i = 0; i < cloneCycles; i += 1) {
+        originalCards.forEach((card) => {
+          const clone = card.cloneNode(true);
+          clone.setAttribute('data-testimonial-clone', 'true');
+          clone.setAttribute('aria-hidden', 'true');
+          track.appendChild(clone);
+        });
+      }
+    });
+  }
+  setupTestimonialsMarquee();
+  window.addEventListener('load', setupTestimonialsMarquee);
+  window.addEventListener('resize', setupTestimonialsMarquee);
+
+  // ── Hero Video Autoplay + Lightweight Loading ─────────
+  const heroVideo = document.getElementById('hero-video');
+
+  function startHeroVideo() {
+    if (!heroVideo) return;
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+    heroVideo.setAttribute('playsinline', '');
+    const playPromise = heroVideo.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {});
+    }
+  }
+
+  if (heroVideo) {
+    startHeroVideo();
+    heroVideo.addEventListener('canplay', startHeroVideo, { once: true });
+    window.addEventListener('load', startHeroVideo, { once: true });
+  }
+
+  // ── Steps Sequential Highlight ─────────────────
+  (function(){
+    const stepsRow  = document.querySelector('.steps-row');
+    if(!stepsRow) return;
+
+    const steps     = Array.from(stepsRow.querySelectorAll('.step'));
+    const HOLD      = 1200;   // ms each card stays highlighted
+    const GAP       = 340;    // ms between cards
+    const LOOP_WAIT = 5000;   // ms idle before repeating
+    let   loopTimer = null;
+    let   running   = false;
+
+    /* ---- remove ring helpers ---- */
+    function clearRings(el){
+      el.querySelectorAll('.step-pulse-ring').forEach(r=>r.remove());
+    }
+
+    /* ---- highlight one card ---- */
+    function highlightStep(el){
+      clearRings(el);
+      el.classList.remove('step-highlight-exit');
+      el.classList.add('step-highlight');
+      /* inject pulse ring */
+      const ring = document.createElement('span');
+      ring.className = 'step-pulse-ring';
+      el.appendChild(ring);
+      ring.addEventListener('animationend', ()=>ring.remove(), {once:true});
+    }
+
+    /* ---- remove highlight from one card ---- */
+    function unhighlightStep(el){
+      el.classList.remove('step-highlight');
+      el.classList.add('step-highlight-exit');
+      clearRings(el);
+      /* clean exit class after transition */
+      setTimeout(()=>el.classList.remove('step-highlight-exit'), 520);
+    }
+
+    /* ---- run the full sequence ---- */
+    function runSequence(){
+      if(running) return;
+      running = true;
+      clearTimeout(loopTimer);
+
+      steps.forEach(s=>{ unhighlightStep(s); s.classList.remove('step-highlight-exit'); });
+
+      let i = 0;
+      function next(){
+        if(i > 0) unhighlightStep(steps[i-1]);
+        if(i >= steps.length){
+          running = false;
+          /* schedule loop repeat */
+          loopTimer = setTimeout(runSequence, LOOP_WAIT);
+          return;
+        }
+        highlightStep(steps[i]);
+        i++;
+        setTimeout(next, HOLD + GAP);
+      }
+      next();
+    }
+
+    /* ---- Intersection Observer trigger ---- */
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting && !running){
+          /* small delay so user sees section first */
+          setTimeout(runSequence, 400);
+        }
+      });
+    }, { threshold: 0.28 });
+
+    observer.observe(stepsRow);
+  })();
+
+
+  function openLegal(title, key){
+    document.getElementById('legal-title').textContent = title;
+    const src = document.getElementById('legal-content-' + key);
+    const body = document.getElementById('legal-body-content');
+    body.innerHTML = src ? src.innerHTML : '<div class="legal-content-inner"><p style="color:#4b5563;text-align:center;padding:40px 0">المحتوى قريباً.</p></div>';
+    const ov = document.getElementById('legal-overlay');
+    ov.classList.add('open');
+    body.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLegal(){
+    document.getElementById('legal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLegal(); });
+
+
+  const heroSection = document.querySelector('.hero');
+  if (heroVideo && heroSection) {
+    function updateHeroVideoVisibility() {
+      const heroRect = heroSection.getBoundingClientRect();
+      heroVideo.style.opacity = heroRect.bottom > 0 ? '1' : '0';
+    }
+    window.addEventListener('scroll', updateHeroVideoVisibility, {passive:true});
+    updateHeroVideoVisibility();
+  }
+    // ── Meta Pixel — Lead on any CTA click ──────────────────
+  (function(){
+    var CTA_SELECTOR = [
+      'a[href*="inscription"]',
+      'a[href*="signup"]',
+      'a[href*="register"]',
+      'a[href*="coincarriere"]',
+      '.btn-primary',
+      '.btn-cta',
+      '.hero-cta-animated',
+      '.cta-btn',
+      '.nav-cta',
+      '[data-cta]',
+      '.popup-cta',
+      '.section-cta'
+    ].join(',');
+
+    function fireLead(){
+      if(typeof fbq === 'function'){
+        fbq('track', 'Lead');
+      }
+    }
+
+    /* event delegation sur tout le document — capte tous les clics présents et futurs */
+    document.addEventListener('click', function(e){
+      var el = e.target.closest(CTA_SELECTOR);
+      if(el) fireLead();
+    }, true);
+  })();
+
+</script>
+
+</body>
+</html>
