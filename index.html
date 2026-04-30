@@ -8,18 +8,11 @@
 <link rel="shortcut icon" type="image/jpeg" href="https://res.cloudinary.com/dl296lrkq/image/upload/v1777292034/575713695_17845265847607766_1699283501162632547_n_ydnpqy.jpg"/>
 <link rel="apple-touch-icon" href="https://res.cloudinary.com/dl296lrkq/image/upload/v1777292034/575713695_17845265847607766_1699283501162632547_n_ydnpqy.jpg"/>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel Code — deferred to avoid blocking LCP -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1943505183203566');
-fbq('track', 'PageView');
+// Stub fbq so CTA clicks before pixel loads still queue correctly
+window.fbq=window.fbq||function(){(window._fbqQueue=window._fbqQueue||[]).push(arguments)};
+window._fbq=window._fbq||window.fbq;
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1943505183203566&ev=PageView&noscript=1"
@@ -28,12 +21,22 @@ src="https://www.facebook.com/tr?id=1943505183203566&ev=PageView&noscript=1"
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<!-- Load fonts async — non-render-blocking -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap"/></noscript>
+<!-- Preload mobile hero image (LCP on mobile) -->
+<link rel="preload" as="image" href="https://res.cloudinary.com/dl296lrkq/image/upload/w_828,f_webp,q_80/v1777376929/Untitled_1080_x_1920_px_1_ikpcu4.png" media="(max-width:900px)"/>
 
 <style>
 /* ═══════════════════════════════
    BASE
 ═══════════════════════════════ */
+/* Ensure text is visible before Cairo loads */
+@font-face {
+  font-family: 'Cairo';
+  font-display: swap;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
@@ -50,13 +53,15 @@ img{max-width:100%;display:block}
 .container{max-width:1080px;margin:0 auto;padding:0 24px;width:100%}
 .center{text-align:center}
 
-/* Reveal animation */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
-.rv.on{opacity:1;transform:translateY(0)}
-.rv2{opacity:0;transform:translateY(22px);transition:opacity .55s .1s ease,transform .55s .1s ease}
-.rv2.on{opacity:1;transform:translateY(0)}
-.rv3{opacity:0;transform:translateY(22px);transition:opacity .55s .2s ease,transform .55s .2s ease}
-.rv3.on{opacity:1;transform:translateY(0)}
+/* Reveal animation — elements visible by default, JS adds the animation */
+.rv,.rv2,.rv3{opacity:1;transform:none}
+/* JS will add .rv-ready to body once IntersectionObserver is set up */
+.rv-ready .rv{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.rv-ready .rv.on{opacity:1;transform:translateY(0)}
+.rv-ready .rv2{opacity:0;transform:translateY(22px);transition:opacity .55s .1s ease,transform .55s .1s ease}
+.rv-ready .rv2.on{opacity:1;transform:translateY(0)}
+.rv-ready .rv3{opacity:0;transform:translateY(22px);transition:opacity .55s .2s ease,transform .55s .2s ease}
+.rv-ready .rv3.on{opacity:1;transform:translateY(0)}
 
 /* Section label pill */
 .pill{
@@ -169,6 +174,8 @@ p.sec-sub{
   left:50%;
   transform:translateX(-50%);
   white-space:nowrap;
+  z-index:10;
+  margin-bottom:0;
 }
 .hero-bottom-block{
   position:absolute;
@@ -603,6 +610,7 @@ p.sec-sub{
     transparent  100%
   );
   animation:borderSpin 5s linear infinite;
+  will-change:transform;
   z-index:-2;
   pointer-events:none;
 }
@@ -722,6 +730,7 @@ p.sec-sub{
   will-change:transform;
   animation:testimonialScroll 38s linear infinite;
   direction:ltr;
+  backface-visibility:hidden;
 }
 .testimonial-track.reverse{
   animation-direction:reverse;
@@ -1618,13 +1627,14 @@ footer p{
      Hook TOF: المشكل + الحل في جملة واحدة
 ═══════════════════════════════════════════ -->
 <section class="hero">
-  <video class="hero-video" id="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-    <source src="https://res.cloudinary.com/dl296lrkq/video/upload/v1777453369/Hero_gde4j5.mp4" type="video/mp4"/>
+  <video class="hero-video" id="hero-video" autoplay muted loop playsinline preload="none" poster="https://res.cloudinary.com/dl296lrkq/image/upload/w_1280,h_720,c_fill,f_webp,q_80/v1777453369/Hero_gde4j5" aria-hidden="true">
+    <source src="https://res.cloudinary.com/dl296lrkq/video/upload/q_auto,f_auto/v1777453369/Hero_gde4j5.mp4" type="video/mp4"/>
   </video>
+
+  <!-- Badge positioned relative to the hero section, not the container -->
+  <div class="hero-badge rv" style="position:absolute;top:36px;left:50%;transform:translateX(-50%);z-index:10;white-space:nowrap;margin-bottom:0;"><span></span>منصة التوظيف الأولى لمراكز النداء في المغرب</div>
+
   <div class="container">
-
-    <div class="hero-badge rv"><span></span>منصة التوظيف الأولى لمراكز النداء في المغرب</div>
-
     <div class="hero-bottom-block">
     <h1 class="rv">
       <span class="hero-line">شحال من <em dir="ltr">candidat</em></span>
@@ -1669,9 +1679,16 @@ footer p{
   <!-- الجزء الفوقي: الصورة + البادج فوقها -->
   <div class="hero-custom-img">
     <img
-      src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777376929/Untitled_1080_x_1920_px_1_ikpcu4.png"
+      src="https://res.cloudinary.com/dl296lrkq/image/upload/w_828,f_webp,q_80/v1777376929/Untitled_1080_x_1920_px_1_ikpcu4.png"
+      srcset="https://res.cloudinary.com/dl296lrkq/image/upload/w_480,f_webp,q_80/v1777376929/Untitled_1080_x_1920_px_1_ikpcu4.png 480w,
+              https://res.cloudinary.com/dl296lrkq/image/upload/w_828,f_webp,q_80/v1777376929/Untitled_1080_x_1920_px_1_ikpcu4.png 828w"
+      sizes="100vw"
       alt="مركز النداء"
+      width="1080"
+      height="1920"
       loading="eager"
+      fetchpriority="high"
+      decoding="async"
     />
     <div class="hero-badge-wrap">
       <div class="hero-badge">
@@ -2608,6 +2625,8 @@ function resetContactForm() {
 
 <script>
   // ── Scroll Reveal ──────────────────────────────
+  // Add rv-ready to body so CSS activates animation classes
+  document.body.classList.add('rv-ready');
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
@@ -2893,7 +2912,30 @@ function resetContactForm() {
     window.addEventListener('scroll', updateHeroVideoVisibility, {passive:true});
     updateHeroVideoVisibility();
   }
-    // ── Meta Pixel — Lead on any CTA click ──────────────────
+    // ── Meta Pixel — Load deferred after page load ──────────
+  (function(){
+    function loadPixel(){
+      if(window._pixelLoaded) return;
+      window._pixelLoaded = true;
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init','1943505183203566');
+      fbq('track','PageView');
+      // flush queued events from stub
+      if(window._fbqQueue){window._fbqQueue.forEach(function(a){fbq.apply(null,a)});delete window._fbqQueue;}
+    }
+    // Load after user interaction or 4s timeout — whichever is first
+    ['scroll','click','keydown','touchstart'].forEach(function(ev){
+      window.addEventListener(ev,loadPixel,{once:true,passive:true});
+    });
+    setTimeout(loadPixel, 4000);
+  })();
   (function(){
     var CTA_SELECTOR = [
       'a[href*="inscription"]',
