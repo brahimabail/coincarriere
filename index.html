@@ -8,19 +8,11 @@
 <link rel="shortcut icon" type="image/jpeg" href="https://res.cloudinary.com/dl296lrkq/image/upload/v1777292034/575713695_17845265847607766_1699283501162632547_n_ydnpqy.jpg"/>
 <link rel="apple-touch-icon" href="https://res.cloudinary.com/dl296lrkq/image/upload/v1777292034/575713695_17845265847607766_1699283501162632547_n_ydnpqy.jpg"/>
 
-<!-- Meta Pixel Code — deferred to avoid blocking LCP -->
-<script>
-// Stub fbq so CTA clicks before pixel loads still queue correctly
-window.fbq=window.fbq||function(){(window._fbqQueue=window._fbqQueue||[]).push(arguments)};
-window._fbq=window._fbq||window.fbq;
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1943505183203566&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://res.cloudinary.com" crossorigin/>
+<link rel="dns-prefetch" href="https://res.cloudinary.com"/>
 <!-- Load fonts async — non-render-blocking -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" media="print" onload="this.media='all'"/>
@@ -159,8 +151,6 @@ p.sec-sub{
   pointer-events:none;
   filter:saturate(1.05) brightness(.45);
 }
-  }
-}
 
 .hero .container{
   position:relative;
@@ -179,9 +169,10 @@ p.sec-sub{
 }
 .hero-bottom-block{
   position:absolute;
-  bottom:60px;
+  top:50%;
   left:0;
   right:0;
+  transform:translateY(-44%);
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -205,45 +196,50 @@ p.sec-sub{
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
 .hero h1{
-  font-size:clamp(2rem,4.8vw,3.2rem);
-  font-weight:900;line-height:1.35;color:#fff;
-  margin-bottom:18px;
-  text-shadow:0 2px 12px rgba(0,0,0,.6);
+  font-size:clamp(2rem,3.8vw,3.2rem);
+  font-weight:900;line-height:1.45;color:#fff;
+  margin-bottom:32px;
+  text-shadow:0 3px 24px rgba(0,0,0,.7);
+  letter-spacing:-.02em;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 @media(max-width:768px){
   .hero h1{
-    font-size:1.8rem;
-    line-height:1.4;
+    font-size:clamp(2.2rem,5.5vw,3rem);
+    line-height:1.25;
   }
 }
 @media(max-width:640px){
   .hero h1{
-    font-size:1.5rem;
-    line-height:1.5;
-    margin-bottom:14px;
+    font-size:clamp(1.9rem,6vw,2.4rem);
+    line-height:1.28;
+    margin-bottom:20px;
   }
 }
 .hero-line{
   display:block;
   unicode-bidi:plaintext;
+  white-space:nowrap;
 }
 .hero h1 em{
   font-style:normal;color:#b4dc02;
 }
 .hero-sub{
-  font-size:1.08rem;color:#fff;
-  max-width:600px;margin:0 auto 18px;line-height:1.85;
+  font-size:1.13rem;color:#fff;
+  max-width:620px;margin:0 auto 26px;line-height:1.85;
   text-shadow:0 1px 8px rgba(0,0,0,.5);
 }
 .hero-promise{
-  font-size:.94rem;
+  font-size:1.05rem;
   color:#fff;
-  max-width:560px;
-  margin:0 auto 28px;
-  line-height:1.8;
-  font-weight:700;
-  text-shadow:0 2px 12px rgba(0,0,0,.5);
+  max-width:640px;
+  margin:0 auto 32px;
+  line-height:1.85;
+  font-weight:600;
+  text-shadow:0 2px 12px rgba(0,0,0,.55);
 }
 .hero-promise .promise-line{
   display:block;
@@ -271,6 +267,11 @@ p.sec-sub{
   color:#fff;
   font-size:.8rem;font-weight:600;padding:6px 16px;border-radius:50px;
   backdrop-filter:blur(4px);
+}
+.chip-pos{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.3);
+  color:#fff;
 }
 @media(max-width:640px){
   .pain-chips{
@@ -355,30 +356,34 @@ p.sec-sub{
 .hero-custom-content{
   position:absolute;
   bottom:0;
+  top:0;
   left:0;
   right:0;
   z-index:2;
-  padding:28px 22px 44px;
+  padding:0 22px 56px;
   text-align:center;
   display:flex;
   flex-direction:column;
   align-items:center;
+  justify-content:flex-end;
+  gap:24px;
 }
 
 /* العنوان */
 .hero-custom .hero-title{
-  font-size:clamp(1.55rem, 6.5vw, 2.1rem);
+  font-size:clamp(1.8rem, 7.5vw, 2.6rem);
   line-height:1.42;
   font-weight:900;
-  margin-bottom:14px;
+  margin-bottom:20px;
   color:#fff;
-  text-shadow:0 2px 16px rgba(0,0,0,.3);
-  letter-spacing:-.01em;
+  text-shadow:0 3px 22px rgba(0,0,0,.6);
+  letter-spacing:-.025em;
   word-break:keep-all;
   overflow-wrap:break-word;
 }
 .hero-custom .hero-title .hero-line{
   display:block;
+  white-space:nowrap;
 }
 .hero-custom .hero-title em{
   font-style:normal;
@@ -387,36 +392,39 @@ p.sec-sub{
 
 /* البروميس */
 .hero-custom .hero-promise{
-  font-size:clamp(.72rem, 3.4vw, 1rem);
+  font-size:clamp(1.1rem, 5.5vw, 1.5rem);
   color:#fff;
-  line-height:1.75;
+  line-height:1.85;
   margin:0 auto 22px;
   max-width:100%;
   width:100%;
-  text-shadow:0 2px 10px rgba(0,0,0,.6);
+  text-shadow:0 2px 12px rgba(0,0,0,.7);
+  font-weight:700;
 }
 .hero-custom .hero-promise .promise-line{
   display:block;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  font-size:clamp(.62rem, 3.1vw, .92rem);
+  white-space:normal;
+  overflow:visible;
+  text-overflow:clip;
+  font-size:clamp(1.1rem, 5.5vw, 1.5rem);
   color:#fff;
+  font-weight:700;
 }
 
 @media(max-width:768px){
   .hero-custom .hero-promise .promise-line{
-    font-size:clamp(.64rem, 3.3vw, .88rem);
+    font-size:clamp(1.1rem, 5.5vw, 1.4rem);
+    white-space:normal;
   }
 }
 @media(max-width:480px){
   .hero-custom .hero-promise .promise-line{
-    font-size:clamp(.58rem, 3.5vw, .78rem);
+    font-size:clamp(1rem, 5.5vw, 1.3rem);
   }
 }
 @media(max-width:360px){
   .hero-custom .hero-promise .promise-line{
-    font-size:clamp(.52rem, 3.8vw, .68rem);
+    font-size:clamp(.95rem, 5.5vw, 1.1rem);
   }
 }
 .hero-custom .hero-trust{
@@ -489,24 +497,27 @@ p.sec-sub{
   .hero-custom-img::before{
     background:linear-gradient(
       180deg,
-      rgba(10,25,41,.30) 0%,
-      rgba(10,25,41,.0)  28%,
-      rgba(10,25,41,.0)  46%,
-      rgba(10,25,41,.70) 65%,
-      rgba(10,25,41,.96) 100%
+      rgba(10,25,41,.55) 0%,
+      rgba(10,25,41,.35) 25%,
+      rgba(10,25,41,.45) 50%,
+      rgba(10,25,41,.75) 72%,
+      rgba(10,25,41,.97) 100%
     );
   }
 
   .hero-custom-content{
-    padding:0 20px 48px;
+    padding:0 20px 56px;
+    justify-content:flex-end;
+    gap:20px;
   }
 
   /* headline — responsive وكبير */
   .hero-custom .hero-title{
-    font-size:clamp(1.6rem, 7vw, 2.2rem);
-    line-height:1.4;
-    margin-bottom:14px;
-    letter-spacing:-.01em;
+    font-size:clamp(1.7rem, 7vw, 2.4rem);
+    line-height:1.42;
+    margin-bottom:16px;
+    letter-spacing:-.02em;
+    white-space:nowrap;
   }
 
   /* subheadline — responsive */
@@ -518,9 +529,9 @@ p.sec-sub{
   }
   .hero-custom .hero-promise .promise-line{
     font-size:clamp(.78rem, 3.6vw, .95rem);
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    white-space:normal;
+    overflow:visible;
+    text-overflow:clip;
   }
 
   /* زر CTA كامل العرض */
@@ -548,29 +559,48 @@ p.sec-sub{
 
 @media(max-width:480px){
   .hero-custom .hero-title{
-    font-size:clamp(1.45rem, 7.5vw, 1.75rem);
+    font-size:clamp(1.55rem, 7.2vw, 2rem);
     line-height:1.42;
+    white-space:nowrap;
   }
   .hero-custom .hero-promise{
     font-size:clamp(.8rem, 4vw, .95rem);
   }
   .hero-custom .hero-promise .promise-line{
     font-size:clamp(.72rem, 3.8vw, .88rem);
+    white-space:normal;
+    overflow:visible;
   }
   .hero-custom-content{
-    padding:0 16px 40px;
+    padding:0 16px 52px;
+    gap:18px;
   }
 }
 
 @media(max-width:360px){
   .hero-custom .hero-title{
-    font-size:clamp(1.3rem, 8vw, 1.55rem);
+    font-size:clamp(1.35rem, 7.5vw, 1.7rem);
+    white-space:nowrap;
   }
   .hero-custom .hero-promise{
     font-size:clamp(.78rem, 4.2vw, .9rem);
   }
   .hero-custom .hero-promise .promise-line{
     font-size:clamp(.68rem, 4vw, .82rem);
+  }
+}
+
+/* شاشات كبيرة: iPhone 14 / Pro / Plus وما فوق */
+@media(min-width:390px) and (max-width:900px){
+  .hero-custom-content{
+    padding-bottom:72px;
+    gap:28px;
+  }
+}
+@media(min-width:430px) and (max-width:900px){
+  .hero-custom-content{
+    padding-bottom:88px;
+    gap:32px;
   }
 }
 
@@ -581,6 +611,8 @@ p.sec-sub{
 .proof-bar{
   background:#0a1929;
   padding:28px 24px;
+  content-visibility:auto;
+  contain-intrinsic-size:0 120px;
 }
 .proof-inner{
   display:flex;flex-wrap:wrap;justify-content:center;
@@ -689,6 +721,8 @@ p.sec-sub{
   overflow:hidden;
   border-top:1px solid #f3f4f6;
   border-bottom:1px solid #f3f4f6;
+  content-visibility:auto;
+  contain-intrinsic-size:0 500px;
 }
 .testimonials .container{
   position:relative;
@@ -1029,12 +1063,12 @@ p.sec-sub{
   margin-bottom:12px;
 }
 .step-n{
-  width:44px;height:44px;border-radius:12px;
-  background:#0077B6;color:#fff;
-  font-weight:900;font-size:1.05rem;
+  width:56px;height:56px;border-radius:16px;
+  background:linear-gradient(135deg,#0077B6,#0096d6);
+  color:#fff;
   display:flex;align-items:center;justify-content:center;
   flex-shrink:0;
-  box-shadow:0 4px 12px rgba(0,119,182,.25);
+  box-shadow:0 6px 18px rgba(0,119,182,.35);
   transition:background .4s ease, box-shadow .4s ease, transform .4s ease;
   position:relative;
   z-index:1;
@@ -1096,7 +1130,10 @@ p.sec-sub{
   background:#b4dc02;
   color:#0a1929;
   box-shadow:0 4px 18px rgba(180,220,2,.55), 0 0 0 4px rgba(180,220,2,.18);
-  transform:scale(1.08);
+  transform:scale(1.1);
+}
+.step.step-highlight .step-n svg{
+  stroke:#0a1929;
 }
 .step.step-highlight h3{
   color:#3a5a00;
@@ -1159,6 +1196,8 @@ p.sec-sub{
   background:#f9fafb;
   padding:72px 24px;
   border-top:1px solid #f0f4f8;border-bottom:1px solid #f0f4f8;
+  content-visibility:auto;
+  contain-intrinsic-size:0 600px;
 }
 .benefits-grid{
   display:grid;
@@ -1183,20 +1222,20 @@ p.sec-sub{
   transform:translateY(-2px);
 }
 .b-icon{
-  width:44px;height:44px;border-radius:11px;
-  background:linear-gradient(135deg,#0077B6,#0096d6);
+  width:52px;height:52px;border-radius:14px;
+  background:linear-gradient(135deg,#0077B6,#00a8e8);
   display:flex;align-items:center;justify-content:center;
   font-size:0;line-height:0;color:transparent;
   margin-bottom:0;
-  box-shadow:0 3px 10px rgba(0,119,182,.2);
+  box-shadow:0 6px 16px rgba(0,119,182,.3);
   grid-row:1;
   grid-column:1;
   align-self:flex-start;
 }
 .b-icon::before{
   content:'';
-  width:22px;
-  height:22px;
+  width:26px;
+  height:26px;
   display:block;
   background-repeat:no-repeat;
   background-position:center;
@@ -1266,6 +1305,8 @@ p.sec-sub{
   background:linear-gradient(135deg,rgba(10,25,41,.85) 0%,rgba(10,58,110,.85) 100%),url('https://res.cloudinary.com/dl296lrkq/image/upload/v1777372729/Untitled_design_3_1_w8g9ra.png') center/cover no-repeat;
   padding:80px 24px;text-align:center;
   position:relative;overflow:hidden;
+  content-visibility:auto;
+  contain-intrinsic-size:0 400px;
 }
 .final-section::before{
   content:'';position:absolute;inset:0;
@@ -1444,24 +1485,55 @@ footer p{
 #exit-overlay{
   display:none;position:fixed;inset:0;z-index:1000;
   background:rgba(10,25,41,.8);backdrop-filter:blur(6px);
-  align-items:center;justify-content:center;padding:20px;
+  align-items:flex-end;justify-content:center;padding:0;
+}
+@media(min-width:600px){
+  #exit-overlay{
+    align-items:center;
+    padding:20px;
+  }
 }
 .popup-box{
-  background:#fff;border-radius:20px;
-  max-width:450px;width:100%;
-  padding:40px 28px;text-align:center;position:relative;
-  box-shadow:0 32px 80px rgba(0,0,0,.35);
+  background:#fff;border-radius:24px 24px 0 0;
+  max-width:480px;width:100%;
+  padding:32px 24px 40px;text-align:center;position:relative;
+  box-shadow:0 -8px 40px rgba(0,0,0,.25);
   font-family:'Cairo',sans-serif;
-  animation:popIn .3s cubic-bezier(.34,1.56,.64,1);
+  animation:slideUp .35s cubic-bezier(.34,1.2,.64,1);
 }
+@media(min-width:600px){
+  .popup-box{
+    border-radius:20px;
+    padding:40px 28px;
+    animation:popIn .3s cubic-bezier(.34,1.56,.64,1);
+    box-shadow:0 32px 80px rgba(0,0,0,.35);
+  }
+}
+@keyframes slideUp{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
 @keyframes popIn{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
-.popup-close{
-  position:absolute;top:14px;left:16px;
-  width:28px;height:28px;
-  display:flex;align-items:center;justify-content:center;
-  background:none;border:none;cursor:pointer;
-  padding:0;font-size:0;line-height:0;color:transparent;
+
+/* شريط سحب فوق الـ popup على الموبايل */
+.popup-box::before{
+  content:'';
+  display:block;
+  width:40px;height:4px;
+  background:#e5e7eb;
+  border-radius:2px;
+  margin:0 auto 20px;
 }
+@media(min-width:600px){
+  .popup-box::before{ display:none; }
+}
+.popup-close{
+  position:absolute;top:16px;left:16px;
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:#f3f4f6;border:none;cursor:pointer;
+  padding:0;font-size:0;line-height:0;color:transparent;
+  border-radius:50%;
+  transition:background .2s;
+}
+.popup-close:active{ background:#e5e7eb; }
 .popup-close::before{
   content:'';
   width:16px;
@@ -1474,8 +1546,8 @@ footer p{
 }
 .popup-brand{
   width:100%;
-  max-width:320px;
-  margin:0 auto 18px;
+  max-width:280px;
+  margin:0 auto 14px;
   background:transparent;
   border:none;
   box-shadow:none;
@@ -1487,7 +1559,7 @@ footer p{
 .popup-brand-img{
   width:100%;
   height:auto;
-  max-height:96px;
+  max-height:80px;
   padding:0;
   object-fit:contain;
   display:block;
@@ -1618,6 +1690,20 @@ footer p{
     max-width:260px;
   }
 }
+.hero-mob-top{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+.hero-mob-bottom{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  width:100%;
+}
+
 </style>
 </head>
 <body>
@@ -1637,27 +1723,27 @@ footer p{
   <div class="container">
     <div class="hero-bottom-block">
     <h1 class="rv">
-      <span class="hero-line">شحال من <em dir="ltr">candidat</em></span>
-      <span class="hero-line">عَيَّطي ليه ل <em dir="ltr">centre d'appel</em></span>
-      <span class="hero-line">وما جاكش فـ <em dir="ltr">l'entretien</em>؟</span>
+      <span class="hero-line">كتوظّف فـ <em dir="ltr">centre d'appel</em></span>
+      <span class="hero-line">وكتضيع وقتك مع <em>CVs</em></span>
+      <span class="hero-line">ما كيوصلوش حتى للمقابلة</span>
     </h1>
 
     <p class="hero-promise rv2">
-      <span class="promise-line">منصة توظيف كتجمع لك غير المرشحين الجادين للمقابلات</span>
-      <span class="promise-line">وكتنقص لك وقت الفرز و عدم الحضور من أول أسبوع</span>
+      <span class="promise-line">منصة كتوصلك بمرشحين مفلترين وجادّين لخدمة <em dir="ltr">centre d'appel</em> جاهزين للمقابلة</span>
+      <span class="promise-line">باش توقف ضياع الوقت مع <em>CVs</em> العشوائية وتسد المناصب بسرعة</span>
     </p>
 
     <div class="pain-chips rv">
-      <span class="chip">CVs غير مؤهلة</span>
-      <span class="chip">عدم الحضور في المقابلات</span>
-      <span class="chip">وقت ضائع في الفرز</span>
-      <span class="chip">مرشحين غير جاهزين</span>
+      <span class="chip chip-pos">✅ فرز تلقائي بالذكاء الاصطناعي</span>
+      <span class="chip chip-pos">✅ مرشحون يؤكدون حضورهم</span>
+      <span class="chip chip-pos">✅ نتائج من أول أسبوع</span>
+      <span class="chip chip-pos">✅ بدون بطاقة بنكية</span>
     </div>
 
     <div class="rv">
       <a href="https://coincarriere.com/register?type=company"
-         onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
-         class="btn">اكتشف المزيد</a>
+        
+         class="btn">جرّب المنصة الآن</a>
     </div>
 
     <div class="trust-row rv">
@@ -1700,29 +1786,31 @@ footer p{
 
   <!-- الجزء السفلي: العنوان + النص + الزر + trust -->
   <div class="hero-custom-content">
-    <h1 class="hero-title">
-      <span class="hero-line">شحال من <em dir="ltr">candidat</em></span>
-      <span class="hero-line">عَيَّطي ليه ل <em dir="ltr">centre d'appel</em></span>
-      <span class="hero-line">وما جاكش فـ <em dir="ltr">l'entretien</em>؟</span>
-    </h1>
-
-    <p class="hero-promise">
-      <span class="promise-line">منصة توظيف كتجمع لك غير المرشحين الجادين للمقابلات</span>
-      <span class="promise-line">وكتنقص لك وقت الفرز و عدم الحضور من أول أسبوع</span>
-    </p>
-
-    <a
-      href="https://coincarriere.com/register?type=company"
-      onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
-      class="btn hero-cta-animated"
-    >
-      اكتشف المزيد
-    </a>
-
-    <div class="hero-trust">
-      <span class="ti"><b></b>مجاني للبدء</span>
-      <span class="ti"><b></b>لا بطاقة بنكية</span>
-      <span class="ti"><b></b>نتائج من أول أسبوع</span>
+    <div class="hero-mob-top">
+      <h1 class="hero-title">
+        <span class="hero-line">كتوظّف فـ <em dir="ltr">centre d'appel</em></span>
+        <span class="hero-line">وكتضيع وقتك مع <em>CVs</em></span>
+        <span class="hero-line">ما كيوصلوش حتى للمقابلة</span>
+      </h1>
+      <p class="hero-promise">
+        <span class="promise-line">منصة كتوصلك بمرشحين مفلترين وجادّين</span>
+        <span class="promise-line">لخدمة <em dir="ltr">centre d'appel</em> جاهزين للمقابلة</span>
+        <span class="promise-line">باش توقف ضياع الوقت مع <em>CVs</em> العشوائية</span>
+      </p>
+    </div>
+    <div class="hero-mob-bottom">
+      <a
+        href="https://coincarriere.com/register?type=company"
+       
+        class="btn hero-cta-animated"
+      >
+        جرّب المنصة الآن
+      </a>
+      <div class="hero-trust">
+        <span class="ti"><b></b>مجاني للبدء</span>
+        <span class="ti"><b></b>لا بطاقة بنكية</span>
+        <span class="ti"><b></b>نتائج من أول أسبوع</span>
+      </div>
     </div>
   </div>
 
@@ -1754,21 +1842,21 @@ footer p{
 
       <!-- ── GROUP 1 (original) ── -->
       <div class="marquee-group" aria-hidden="false">
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217924/13_wqg1ir.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217920/2_slt18x.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217917/8_f82zsk.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217916/1_aj6ety.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217917/7_fekrzc.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217914/6_kawhn7.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217914/9_eddrpi.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217911/10_svvy3t.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/3_nh5gip.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/14_tvu62j.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/12_zk15g3.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217909/11_ar5kov.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217909/4_ydrwdj.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217908/5_dxfauy.webp" alt="شعار" class="logo-img"/></div>
-        <div class="logo-slot"><img src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217907/15_wywlvv.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217924/13_wqg1ir.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217920/2_slt18x.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217917/8_f82zsk.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217916/1_aj6ety.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217917/7_fekrzc.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217914/6_kawhn7.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217914/9_eddrpi.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217911/10_svvy3t.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/3_nh5gip.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/14_tvu62j.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217910/12_zk15g3.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217909/11_ar5kov.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217909/4_ydrwdj.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217908/5_dxfauy.webp" alt="شعار" class="logo-img"/></div>
+        <div class="logo-slot"><img loading="lazy" src="https://res.cloudinary.com/dl296lrkq/image/upload/v1777217907/15_wywlvv.webp" alt="شعار" class="logo-img"/></div>
       </div>
 
     </div>
@@ -1789,7 +1877,7 @@ footer p{
         <div class="testimonial-track">
           <article class="testimonial-card">
             <div class="testimonial-top">
-              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&auto=format&fit=crop&q=80" alt="منى الزوين" />
+              <img loading="lazy" class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&auto=format&fit=crop&q=80" alt="منى الزوين" />
               <div class="testimonial-meta">
                 <div class="testimonial-name">منى الزوين</div>
                 <div class="testimonial-rating">★★★★★</div>
@@ -1801,7 +1889,7 @@ footer p{
 
           <article class="testimonial-card">
             <div class="testimonial-top">
-              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&auto=format&fit=crop&q=80" alt="يونس العلوي" />
+              <img loading="lazy" class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&auto=format&fit=crop&q=80" alt="يونس العلوي" />
               <div class="testimonial-meta">
                 <div class="testimonial-name">يونس العلوي</div>
                 <div class="testimonial-rating">★★★★★</div>
@@ -1813,7 +1901,7 @@ footer p{
 
           <article class="testimonial-card">
             <div class="testimonial-top">
-              <img class="testimonial-avatar" src="https://d2uecu6cucl1lj.cloudfront.net/ari/2024/06/25180622/Chaima-Bouhlel-720x720.jpeg" alt="سلمى بوهلال" />
+              <img loading="lazy" class="testimonial-avatar" src="https://d2uecu6cucl1lj.cloudfront.net/ari/2024/06/25180622/Chaima-Bouhlel-720x720.jpeg" alt="سلمى بوهلال" />
               <div class="testimonial-meta">
                 <div class="testimonial-name">سلمى بوهلال</div>
                 <div class="testimonial-rating">★★★★★</div>
@@ -1825,7 +1913,7 @@ footer p{
 
           <article class="testimonial-card">
             <div class="testimonial-top">
-              <img class="testimonial-avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQE13vTsNNYPlg/profile-displayphoto-scale_200_200/B4DZwktpByJIAY-/0/1770142474645?e=2147483647&v=beta&t=X-yiVTXb3BQMbKOZ9QhYr61smD3nAaccWH7ORbb7g-U" alt="أمين الرازي" />
+              <img loading="lazy" class="testimonial-avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQE13vTsNNYPlg/profile-displayphoto-scale_200_200/B4DZwktpByJIAY-/0/1770142474645?e=2147483647&v=beta&t=X-yiVTXb3BQMbKOZ9QhYr61smD3nAaccWH7ORbb7g-U" alt="أمين الرازي" />
               <div class="testimonial-meta">
                 <div class="testimonial-name">أمين الرازي</div>
                 <div class="testimonial-rating">★★★★★</div>
@@ -1837,7 +1925,7 @@ footer p{
 
           <article class="testimonial-card">
             <div class="testimonial-top">
-              <img class="testimonial-avatar" src="https://media.licdn.com/dms/image/v2/D5603AQFe0WqDCbXk3w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1681465124035?e=2147483647&v=beta&t=rWn-xS8g-azmnSyZk0VB6zd9XSbh0au9igJTq4OZ6OQ" alt="هند العلمي" />
+              <img loading="lazy" class="testimonial-avatar" src="https://media.licdn.com/dms/image/v2/D5603AQFe0WqDCbXk3w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1681465124035?e=2147483647&v=beta&t=rWn-xS8g-azmnSyZk0VB6zd9XSbh0au9igJTq4OZ6OQ" alt="هند العلمي" />
               <div class="testimonial-meta">
                 <div class="testimonial-name">هند العلمي</div>
                 <div class="testimonial-rating">★★★★★</div>
@@ -1849,7 +1937,7 @@ footer p{
 
           <article class="testimonial-card">
             <div class="testimonial-top">
-              <img class="testimonial-avatar" src="https://img.youm7.com/large/202207210317491749.jpg" alt="إسماعيل بلهندة" />
+              <img loading="lazy" class="testimonial-avatar" src="https://img.youm7.com/large/202207210317491749.jpg" alt="إسماعيل بلهندة" />
               <div class="testimonial-meta">
                 <div class="testimonial-name">إسماعيل بلهندة</div>
                 <div class="testimonial-rating">★★★★★</div>
@@ -1880,28 +1968,28 @@ footer p{
     <div class="steps-row">
       <div class="step rv">
         <div class="step-header">
-          <div class="step-n">1</div>
+          <div class="step-n"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 13"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
           <h3>انشر العرض</h3>
         </div>
         <p>حدد المنصب والمهارات والموقع والراتب — في دقائق فقط. نشر فوري لآلاف المرشحين المؤهلين من مراكز النداء.</p>
       </div>
       <div class="step rv2">
         <div class="step-header">
-          <div class="step-n">2</div>
+          <div class="step-n"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/><circle cx="12" cy="12" r="7" stroke-dasharray="3 2"/></svg></div>
           <h3>فلترة ذكية تلقائية</h3>
         </div>
         <p>الخوارزمية تتولى الفرز عنك — فقط المرشحون المتطابقون مع متطلباتك يصلون إلى بريدك. توفير 70% من وقت الفرز اليدوي.</p>
       </div>
       <div class="step rv3">
         <div class="step-header">
-          <div class="step-n">3</div>
+          <div class="step-n"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/></svg></div>
           <h3>قيّم وأجرِ المقابلات</h3>
         </div>
         <p>لوحة تتبع مركزية تضع كل مرشح في مكانه الصحيح — من المرشحين الجدد إلى المقابلة النهائية. جدول مقابلات منظم، رسائل فورية، تقييمات سهلة.</p>
       </div>
       <div class="step rv">
         <div class="step-header">
-          <div class="step-n">4</div>
+          <div class="step-n"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 13 11 15 15 11"/></svg></div>
           <h3>وقّع العقد فوراً</h3>
         </div>
         <p>أرسل العرض الوظيفي للمرشح وستحصل على ردّه في ساعات معدودة — لا انتظار، لا هدر وقت. من البحث إلى التوظيف في أقل من أسبوع.</p>
@@ -1963,8 +2051,8 @@ footer p{
 
     <div style="margin-top:44px;" class="rv">
       <a href="https://coincarriere.com/register?type=company"
-         onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
-         class="btn">ابدأ واكسب هذه الفوائد مجاناً</a>
+        
+         class="btn">جرّب المنصة الآن</a>
     </div>
   </div>
 </section>
@@ -2017,8 +2105,8 @@ footer p{
     </div>
     <div class="video-cta-wrap">
       <a href="https://coincarriere.com/register?type=company"
-         onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
-         class="btn" style="margin-top:28px;display:inline-block;">جرّبها مجاناً الآن</a>
+        
+         class="btn" style="margin-top:28px;display:inline-block;">جرّب المنصة الآن</a>
     </div>
   </div>
 </section>
@@ -2087,9 +2175,9 @@ function playDemoVideo(){
         لا حاجة لبطاقة بنكية للبدء
       </p>
       <a href="https://coincarriere.com/register?type=company"
-         onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
+        
          class="btn" style="font-size:1.05rem;padding:16px 44px;">
-        جرب المنصة مجاناً
+        جرّب المنصة الآن
       </a>
       <div class="trust-row">
         <span class="ti" style="color:rgba(255,255,255,.6)"><b></b>مجاني بالكامل</span>
@@ -2588,8 +2676,8 @@ function resetContactForm() {
 <div id="sticky-bar">
   <span class="s-text">ضياع الوقت و عدم الحضور؟ جرب الفرز الذكي مجاناً</span>
   <a href="https://coincarriere.com/register?type=company"
-     onclick="if(typeof fbq!=='undefined')fbq('track','Lead')"
-     class="s-btn">اكتشف المزيد</a>
+    
+     class="s-btn">جرّب المنصة الآن</a>
 </div>
 
 
@@ -2611,12 +2699,12 @@ function resetContactForm() {
     </p>
     <div class="popup-hi">التسجيل مجاني — ابدأ وشوف الفرق من أول أسبوع</div>
     <a href="https://coincarriere.com/register?type=company"
-       onclick="if(typeof fbq!=='undefined')fbq('track','Lead');document.getElementById('exit-overlay').style.display='none';"
+       onclick="document.getElementById('exit-overlay').style.display='none'"
        class="btn" style="display:block;margin-bottom:12px;font-size:.95rem;padding:13px;">
-      اكتشف الحل مجاناً الآن
+      جرّب المنصة الآن
     </a>
     <button onclick="document.getElementById('exit-overlay').style.display='none';"
-      style="background:none;border:none;cursor:pointer;font-size:.8rem;color:#4b5563;font-family:'Cairo',sans-serif;">
+      style="background:none;border:none;cursor:pointer;font-size:.82rem;color:#dc2626;font-family:'Cairo',sans-serif;font-weight:600;text-decoration:none;opacity:.7;transition:background .2s,color .2s,border-radius .2s;padding:6px 14px;border-radius:6px;" onmouseover="this.style.background='#dc2626';this.style.color='#fff'" onmouseout="this.style.background='none';this.style.color='#dc2626'">
       لا شكراً، سأستمر في الفرز اليدوي
     </button>
   </div>
@@ -2756,15 +2844,35 @@ function resetContactForm() {
   // ── Exit Intent ────────────────────────────────
   let popShown = false;
   const ov = document.getElementById('exit-overlay');
+
+  function showPopup() {
+    if (popShown) return;
+    popShown = true;
+    ov.style.display = 'flex';
+  }
+
+  // Desktop: mouse leaves toward top of page
   document.addEventListener('mouseleave', e => {
-    if (e.clientY <= 5 && !popShown) { popShown=true; ov.style.display='flex'; }
+    if (e.clientY <= 5) showPopup();
   });
-  let lastY = 0;
+
+  // Mobile: fast scroll-up = user trying to go back
+  let lastY = window.scrollY;
+  let fastUpStart = null;
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
-    if (!popShown && y < lastY - 250 && y < 400) { popShown=true; ov.style.display='flex'; }
+    if (y < lastY) {
+      if (fastUpStart === null) fastUpStart = lastY;
+      // إذا رجع فوق بـ 150px دفعة وحدة وهو فوق منتصف الصفحة
+      if (fastUpStart - y > 150 && y < document.body.scrollHeight * 0.5) {
+        showPopup();
+      }
+    } else {
+      fastUpStart = null;
+    }
     lastY = y;
-  }, {passive:true});
+  }, {passive: true});
+
   document.getElementById('close-popup').addEventListener('click', () => ov.style.display='none');
   ov.addEventListener('click', e => { if(e.target===ov) ov.style.display='none'; });
 
@@ -2912,58 +3020,6 @@ function resetContactForm() {
     window.addEventListener('scroll', updateHeroVideoVisibility, {passive:true});
     updateHeroVideoVisibility();
   }
-    // ── Meta Pixel — Load deferred after page load ──────────
-  (function(){
-    function loadPixel(){
-      if(window._pixelLoaded) return;
-      window._pixelLoaded = true;
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window,document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init','1943505183203566');
-      fbq('track','PageView');
-      // flush queued events from stub
-      if(window._fbqQueue){window._fbqQueue.forEach(function(a){fbq.apply(null,a)});delete window._fbqQueue;}
-    }
-    // Load after user interaction or 4s timeout — whichever is first
-    ['scroll','click','keydown','touchstart'].forEach(function(ev){
-      window.addEventListener(ev,loadPixel,{once:true,passive:true});
-    });
-    setTimeout(loadPixel, 4000);
-  })();
-  (function(){
-    var CTA_SELECTOR = [
-      'a[href*="inscription"]',
-      'a[href*="signup"]',
-      'a[href*="register"]',
-      'a[href*="coincarriere"]',
-      '.btn-primary',
-      '.btn-cta',
-      '.hero-cta-animated',
-      '.cta-btn',
-      '.nav-cta',
-      '[data-cta]',
-      '.popup-cta',
-      '.section-cta'
-    ].join(',');
-
-    function fireLead(){
-      if(typeof fbq === 'function'){
-        fbq('track', 'Lead');
-      }
-    }
-
-    /* event delegation sur tout le document — capte tous les clics présents et futurs */
-    document.addEventListener('click', function(e){
-      var el = e.target.closest(CTA_SELECTOR);
-      if(el) fireLead();
-    }, true);
-  })();
 
 </script>
 
